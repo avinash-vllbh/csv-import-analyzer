@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Csv::Import::Analyzer::VERSION
   spec.authors       = ["avinash vallabhaneni"]
   spec.email         = ["avinash.vllbh@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.description   = %q{Santize large csv files and help in predicting datatypes including min max values for easy import to SQL}
+  spec.summary       = %q{To process large csv files and predict valid datatypes of each column for easy import into SQL}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -20,4 +20,6 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake", "~> 10.0"
+  
+  spec.add_runtime_dependency "smarter_csv", "~> 1.0.17"
 end
