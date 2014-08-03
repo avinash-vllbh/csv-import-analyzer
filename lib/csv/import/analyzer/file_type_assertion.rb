@@ -3,22 +3,32 @@ require 'pry'
 module Analyzer
   class FileTypeAssertion
 
-    attr_reader :filename
+    # def initialize(filename)
+    #   @filename = filename
+    # end
+    # def filename
+    #   @filename
+    # end
 
-    def initialize(filename)
-      @filename = filename
+    def check_file_type(filename)
+      extension = File.absolute_path(filename).split(".").last
+      if extension == "csv"
+        Analyzer::FileTypeAssertion.new("sampleTab.csv")
+      #Try adding support for non csv files - xlsx, xls in future
+      elsif extension == "xlsx"
+        puts "xlsx"
+      else
+        # return UnsupportedFileFormat.new
+      end
     end
 
-    def check_file_type
+    def self.convert_excel_to_csv
 
     end
 
-    def convert_excel_to_csv
+    def csv_clean
 
     end
 
   end
 end
-
-hi = Analyzer::FileTypeAssertion.new("avinash")
-hi.test

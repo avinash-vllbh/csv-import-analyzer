@@ -22,4 +22,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   
   spec.add_runtime_dependency "smarter_csv", "~> 1.0.17"
+  spec.add_runtime_dependency "roo"
 end

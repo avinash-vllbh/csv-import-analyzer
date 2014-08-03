@@ -24,9 +24,8 @@ module Analyzer
       delimiter.keys.each do |key|
         #Count the occurances of delimiter in a line
         total_count_delimiter = line.substr_count(key)
-        #count the occurances of delimiter between quotes inside a line
+        #count the occurances of delimiter between quotes inside a line to disregard them
         quoted_delimiter_count = getting_contents_of_quoted_values(line).substr_count(key)
-
         delimiter[key] += total_count_delimiter - quoted_delimiter_count
       end
     end
