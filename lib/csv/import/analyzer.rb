@@ -4,6 +4,21 @@ require "smarter_csv"
 module Csv
   module Import
     module Analyzer
+      # def initialize(options)
+      #   options = defaults.merge(options)
+      # end
+      def self.defaults
+        {
+          :metadata_output => nil, 
+          :processed_input => nil, 
+          :unique => 10, 
+          :chunk => 20, 
+          :skip => 0, 
+          :database => nil, 
+          :quote_convert => true, 
+          :replace_nulls => true
+        }
+      end
       def self.options
         @options ||= {
           :metadata_output => true,
@@ -11,7 +26,7 @@ module Csv
         }
       end
       def self.process(name)
-        puts options
+        puts defaults.merge(options)
         test = SmarterCSV.process('/home/avinash/Desktop/process_csv/samples/sampleTab.csv')
         puts test
       end
