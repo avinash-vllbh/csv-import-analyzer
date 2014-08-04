@@ -3,9 +3,45 @@ require "tempfile"
 require_relative "analyzer/delimiter_identifier"
 
 module CsvImportAnalyzer
-  class Analyzer
+  class CsvSanitizer
 
-    def self.defaults
+    def process(filename, options)
+
+      options = defaults.merge(options)
+      skip_lines = options[:skip]
+      puts options[:skip]
+      delimiter = CsvImportAnalyzer::DelimiterIdentifier.identify_delimiter(filename)
+      puts delimiter
+
+      file = Tempfile.new("csv-import.csv")
+      puts File.absolute_path(file)
+
+      File.foreach(filename) do |line|
+        if skip_lines > 0
+          skip_lines = skip_lines - 1
+        else
+          #Check if the line is empty
+          if line.length > 1
+            line = replace_line_single_quotes(line,delimiter)
+            begin
+              line = CSV.parse_line(line, {:col_sep => delimiter})
+            rescue CSV::MalformedCSVError => error
+              puts "#{error}".fg("#ff0000")
+              puts line
+              puts "Please correct the above line and re-enter"
+              line = gets.chomp
+              line = CSV.parse_line(line, {:col_sep => delimiter})
+            end
+            line = replace_null_values(line)
+            puts line
+          end
+        end
+      end
+    end
+
+    private
+
+    def defaults
       {
         :metadata_output => nil, 
         :processed_input => nil, 
@@ -17,36 +53,6 @@ module CsvImportAnalyzer
         :replace_nulls => true
       }
     end
-
-    def self.process(filename, options)
-      puts CsvImportAnalyzer::Analyzer.defaults.merge(options)
-
-      file = Tempfile.new("csv-import.csv")
-      puts File.absolute_path(file)
-
-      File.foreach(filename) do |line|
-        if skip_lines > 0
-          skip_lines = skip_lines - 1
-        else
-          #Check if the line is empty
-          if line.length > 1
-            line = self.replace_line_single_quotes(line,delimiter)
-            begin
-              line = CSV.parse_line(line, {:col_sep => delimiter})
-            rescue CSV::MalformedCSVError => error
-              puts "#{error}".fg("#ff0000")
-              puts line
-              puts "Please correct the above line and re-enter"
-              line = gets.chomp
-              line = CSV.parse_line(line, {:col_sep => delimiter})
-            end
-            line = replace_null_values(line)
-          end
-        end
-      end
-    end
-
-    private
 
     def replace_line_single_quotes(line, delimiter)
       delimiter = "\\|" if delimiter == "|"

@@ -5,7 +5,7 @@ module CSVImportAnalyzer
   extend self
   def process(filename, options = {})
     if File::exists?(filename)
-      CsvImportAnalyzer::Analyzer.process(File.absolute_path(filename), options)
+      CsvImportAnalyzer::CsvSanitizer.new().process(File.absolute_path(filename), options)
     else
       # FileNotFound.new
     end

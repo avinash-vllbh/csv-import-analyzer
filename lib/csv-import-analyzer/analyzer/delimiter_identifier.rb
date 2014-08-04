@@ -5,7 +5,7 @@ class String
     self.scan(/(#{needle})/).size
   end
 end
-module Analyzer
+module CsvImportAnalyzer
   module DelimiterIdentifier
     extend self
     
@@ -64,4 +64,3 @@ module Analyzer
 
   end
 end
-puts Analyzer::DelimiterIdentifier.identify_delimiter("sampleTab.csv")
