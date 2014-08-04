@@ -1,5 +1,5 @@
 require 'pry'
-require_relative "csv-import-analyzer/analyzer"
+require_relative "csv-import-analyzer/csv_sanitizer"
 module CSVImportAnalyzer
   # To identify the methods  as class methods
   extend self

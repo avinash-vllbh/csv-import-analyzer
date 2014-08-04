@@ -11,10 +11,10 @@ module CsvImportAnalyzer
       skip_lines = options[:skip]
       puts options[:skip]
       delimiter = CsvImportAnalyzer::DelimiterIdentifier.identify_delimiter(filename)
-      puts delimiter
+      options[:delimiter] = delimiter
 
-      file = Tempfile.new("csv-import.csv")
-      puts File.absolute_path(file)
+      # file = Tempfile.new("csv-import.csv")
+      # puts File.absolute_path(file)
 
       File.foreach(filename) do |line|
         if skip_lines > 0
@@ -26,10 +26,11 @@ module CsvImportAnalyzer
             begin
               line = CSV.parse_line(line, {:col_sep => delimiter})
             rescue CSV::MalformedCSVError => error
-              puts "#{error}".fg("#ff0000")
-              puts line
-              puts "Please correct the above line and re-enter"
-              line = gets.chomp
+              line = "#{line}\""
+              # puts "#{error}"
+              # puts line
+              # puts "Please correct the above line and re-enter"
+              # line = gets.chomp
               line = CSV.parse_line(line, {:col_sep => delimiter})
             end
             line = replace_null_values(line)
@@ -37,6 +38,8 @@ module CsvImportAnalyzer
           end
         end
       end
+
+
     end
 
     private
@@ -46,6 +49,7 @@ module CsvImportAnalyzer
         :metadata_output => nil, 
         :processed_input => nil, 
         :unique => 10, 
+        :datatype_analysis => 10,
         :chunk => 20, 
         :skip => 0, 
         :database => nil, 

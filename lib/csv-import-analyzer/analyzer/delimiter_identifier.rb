@@ -8,7 +8,7 @@ end
 module CsvImportAnalyzer
   module DelimiterIdentifier
     extend self
-    
+      
     @delimiter = {"," => 0, ";" => 0, "\t" => 0, "|" => 0}
 
     def delimiter
