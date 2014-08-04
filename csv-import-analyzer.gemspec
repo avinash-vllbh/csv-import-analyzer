@@ -5,7 +5,7 @@ require 'csv/import/analyzer/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "csv-import-analyzer"
-  spec.version       = Csv::Import::Analyzer::VERSION
+  spec.version       = CsvImportAnalyzer::Version::VERSION
   spec.authors       = ["avinash vallabhaneni"]
   spec.email         = ["avinash.vallab@gmail.com"]
   spec.description   = %q{Santize large csv files and help in predicting datatypes including min max values for easy import to SQL}
