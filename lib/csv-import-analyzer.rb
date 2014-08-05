@@ -1,7 +1,8 @@
 require 'pry'
 require_relative "csv-import-analyzer/csv_sanitizer"
+require_relative "helpers/error_handler"
 module CSVImportAnalyzer
-  # To identify the methods  as class methods
+  # To identify the methods in the module as class methods
   extend self
   def process(filename, options = {})
     if File::exists?(filename)

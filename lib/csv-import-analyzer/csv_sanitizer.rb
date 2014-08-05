@@ -12,6 +12,7 @@ module CsvImportAnalyzer
       puts options[:skip]
       delimiter = CsvImportAnalyzer::DelimiterIdentifier.identify_delimiter(filename)
       options[:delimiter] = delimiter
+      options[:filename] = filename
 
       # file = Tempfile.new("csv-import.csv")
       # puts File.absolute_path(file)

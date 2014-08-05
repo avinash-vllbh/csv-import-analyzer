@@ -12,7 +12,7 @@ module CsvImportAnalyzer
     #Initialize the csv_column_datatypes to a hash that would contain a hash of hashes during the course of execution
     def initialize(options)
       @options = options
-      self.csv_column_datatypes = {}
+      @csv_column_datatypes = {}
     end
     
     def options
