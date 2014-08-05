@@ -3,13 +3,6 @@ require 'pry'
 module Analyzer
   class FileTypeAssertion
 
-    # def initialize(filename)
-    #   @filename = filename
-    # end
-    # def filename
-    #   @filename
-    # end
-
     def check_file_type(filename)
       extension = File.absolute_path(filename).split(".").last
       if extension == "csv"

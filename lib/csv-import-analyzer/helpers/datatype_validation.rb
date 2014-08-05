@@ -1,5 +1,5 @@
 module CsvImportAnalyzer
-  module Validator
+  module Helper
     class DatatypeValidator
 
       def validate_field(content)

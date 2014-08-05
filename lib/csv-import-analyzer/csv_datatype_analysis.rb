@@ -18,6 +18,7 @@ module CsvImportAnalyzer
     def options
       @options
     end
+
     
     # Process a chunk of csv file for all possible datatypes towards each column in the row
     def datatype_analysis(filename)
@@ -26,7 +27,7 @@ module CsvImportAnalyzer
         chunk.each do |row|
           row.each do |key, value|
             unless value == "" || value.nil? || value == "NULL"
-              datatype = CsvImportAnalyzer::Validator::DatatypeValidator.new().validate_field(value)
+              datatype = determine_dataype(value)
               add_to_datatype(key, datatype.to_sym)
             end
           end
@@ -34,6 +35,7 @@ module CsvImportAnalyzer
         break
       end
       finalize_datatypes_for_csv
+      puts csv_column_datatypes
     end
 
     private
@@ -44,6 +46,13 @@ module CsvImportAnalyzer
 
     def chunk_size
       return options[:chunk]
+    end
+
+    #Call DatatypeValidator in helper module to process the possible datatype for the value
+    #Is this the right way to hide dependency on the external classes or objects
+    #May be a static would do ? Should I create an object and call method on the object each time rather than instantiate a new object each time ??
+    def determine_dataype(value)
+      return CsvImportAnalyzer::Helper::DatatypeValidator.new().validate_field(value)
     end
 
     # Build the hash of hashes which hold the count of different possible datatypes for each row
