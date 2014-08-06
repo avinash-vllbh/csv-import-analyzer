@@ -14,9 +14,6 @@ module CsvImportAnalyzer
       options[:delimiter] = delimiter
       options[:filename] = filename
 
-      # file = Tempfile.new("csv-import.csv")
-      # puts File.absolute_path(file)
-
       File.foreach(filename) do |line|
         if skip_lines > 0
           skip_lines = skip_lines - 1
