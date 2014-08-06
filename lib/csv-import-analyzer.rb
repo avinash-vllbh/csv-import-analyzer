@@ -1,15 +1,16 @@
 require 'pry'
 require_relative "csv-import-analyzer/csv_sanitizer"
-require_relative "csv-import-analyzer/helpers/error_handler"
-module CSVImportAnalyzer
+require_relative "csv-import-analyzer/helpers/errors"
+module CsvImportAnalyzer
   # To identify the methods in the module as class methods
   extend self
+
   def process(filename, options = {})
-    if File::exists?(filename)
+    if File::exist?(filename)
       CsvImportAnalyzer::CsvSanitizer.new().process(File.absolute_path(filename), options)
     else
-      # FileNotFound.new
+      FileNotFound.new
     end
   end
 end
-CSVImportAnalyzer.process("sampleTab.csv", {:metadata_output => true})
+# CsvImportAnalyzer.process("sampleTab.csv", {:metadata_output => true})

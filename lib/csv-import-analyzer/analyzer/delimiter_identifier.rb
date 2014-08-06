@@ -1,10 +1,5 @@
-class String
-  #Extending string class to return the count of substr inside a string
-  def substr_count(needle)
-    needle = "\\#{needle}" if(needle == '|') # To escape inside regex
-    self.scan(/(#{needle})/).size
-  end
-end
+require_relative "../helpers/string_class_extensions"
+
 module CsvImportAnalyzer
   module DelimiterIdentifier
     extend self
@@ -64,3 +59,5 @@ module CsvImportAnalyzer
 
   end
 end
+
+puts CsvImportAnalyzer::DelimiterIdentifier.identify_delimiter("/home/avinash/Desktop/csv-import-analyzer/spec/fixtures/sample.csv")

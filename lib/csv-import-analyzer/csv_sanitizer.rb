@@ -73,10 +73,14 @@ module CsvImportAnalyzer
       return result
     end
 
+    def null_like
+      ["NULL", "Null", "NUll", "NULl", "null", nil, "", "NAN", "\\N"]
+    end
+
     # Replace all nil, "NAN", empty values with NULL for maintaining consistency during database import
     def replace_null_values(line)
       line.each do |value|
-        if(value == nil || value == "\\N" || value == "nil" ||value == "" ||value == "NAN")
+        if null_like.include?(value)
           replace_index = line.index(value)
           line[replace_index] = "NULL"
         end
