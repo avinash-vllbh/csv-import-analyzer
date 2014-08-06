@@ -4,18 +4,18 @@ require_relative "pg_query_helper"
 module CsvImportAnalyzer
   module Helper
     class SqlQueryBuilder
-      attr_accessor :create_query, :csv_column_datatypes, :min_max_bounds, :nullable, :sql_helper_options
+      attr_accessor :create_query, :import_query, :csv_column_datatypes, :min_max_bounds, :nullable, :sql_helper_options
 
       # Since Building SQL is dependent on multiple things,
       # decided to go with an argumnets hash that gets passed when creating an object for the class
       def initialize(args)
         @options = args[:options]
         @create_query = {}
+        @import_query = {}
         @csv_column_datatypes = args[:column_datatypes]
         @nullable = args[:nullable]
         @databases = [:pg, :mysql]
         @sql_helper_options = {:tablename => tablename, :filename => @options[:filename], :delimiter => @options[:delimiter]}
-        # binding.pry
         @mysql_helper = CsvImportAnalyzer::Helper::MysqlQueryHelper.new(@sql_helper_options)
         @pg_helper = CsvImportAnalyzer::Helper::PgQueryHelper.new(@sql_helper_options)
       end
@@ -71,12 +71,9 @@ module CsvImportAnalyzer
             create_query[key].push(value)
           end
         end
-        databases.each do |db|
-          # binding.pry
-          create_query[db] = create_query[db].join(", ")
-          create_query[db] << ");"
-        end
-        return create_query
+        prepare_sql_statements
+        prepare_import_csv
+        return create_query, import_query
       end
 
       private
@@ -101,8 +98,19 @@ module CsvImportAnalyzer
       def prepare_import_csv
         databases.each do |db|
           if db == :mysql
-            create_query[db][:import] = db.to_s + "_helper".import_csv(args)
+            import_query[db] = mysql_helper.import_csv
+          elsif db == :pg
+            import_query[db] = pg_helper.import_csv
           end
+        end
+      end
+
+      def prepare_sql_statements
+        databases.each do |db|
+          create_query[db][0] = create_query[db].first + " " + create_query[db][1]
+          create_query[db].delete_at(1)
+          create_query[db] = create_query[db].join(", ")
+          create_query[db] << ");"
         end
       end
 
