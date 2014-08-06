@@ -8,10 +8,10 @@ module CsvImportAnalyzer
     # Since Building SQL is dependent on multiple things,
     # decided to go with an argumnets hash that gets passed when creating an object for the class
     def initialize(args)
-      @options = args[:options]
+      @options = args
       @create_query = {}
       @import_query = {}
-      @csv_column_datatypes = args[:column_datatypes]
+      @csv_column_datatypes = args[:csv_column_datatypes]
       @nullable = args[:nullable]
       @databases = [:pg, :mysql]
       @sql_helper_options = {:tablename => tablename, :filename => @options[:filename], :delimiter => @options[:delimiter]}
@@ -117,9 +117,9 @@ module CsvImportAnalyzer
 end
 
 #Testing
-args = {}
-args[:options] = {:delimiter => ",", :chunk => 20, :filename => "/home/avinash/Desktop/csv-import-analyzer/lib/csv-import-analyzer/sampleTab"}
-args[:column_datatypes] = {:year_id=>:int, :make_id=>:string, :model_id=>:string, :description_id=>:string, :price_id=>:float}
-args[:nullable] = [:description_id]
-query = CsvImportAnalyzer::SqlQueryBuilder.new(args)
-puts query.generate_query
+# args = {}
+# args[:options] = {:delimiter => ",", :chunk => 20, :filename => "/home/avinash/Desktop/csv-import-analyzer/lib/csv-import-analyzer/sampleTab"}
+# args[:column_datatypes] = {:year_id=>:int, :make_id=>:string, :model_id=>:string, :description_id=>:string, :price_id=>:float}
+# args[:nullable] = [:description_id]
+# query = CsvImportAnalyzer::SqlQueryBuilder.new(args)
+# puts query.generate_query

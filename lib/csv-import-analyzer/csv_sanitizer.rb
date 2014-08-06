@@ -1,15 +1,17 @@
 require "smarter_csv"
 require "tempfile"
 require_relative "analyzer/delimiter_identifier"
+require_relative "csv_datatype_analysis"
 
 module CsvImportAnalyzer
   class CsvSanitizer
+
+
 
     def process(filename, options)
 
       options = defaults.merge(options)
       skip_lines = options[:skip]
-      puts options[:skip]
       delimiter = CsvImportAnalyzer::DelimiterIdentifier.identify_delimiter(filename)
       options[:delimiter] = delimiter
       options[:filename] = filename
@@ -32,12 +34,11 @@ module CsvImportAnalyzer
               line = CSV.parse_line(line, {:col_sep => delimiter})
             end
             line = replace_null_values(line)
-            puts line
+            p line
           end
         end
       end
-
-
+      CsvImportAnalyzer::CsvDatatypeAnalysis.new(options).datatype_analysis
     end
 
     private

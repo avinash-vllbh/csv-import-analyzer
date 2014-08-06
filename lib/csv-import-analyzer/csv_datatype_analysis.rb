@@ -2,26 +2,32 @@ require "smarter_csv"
 require "tempfile"
 require "pry"
 require_relative "helpers/datatype_validation"
+require_relative "sql_query_builder"
 
 module CsvImportAnalyzer
   class CsvDatatypeAnalysis
 
     #Create a getter and setter for csv_column_datatypes array to be a instance variable to be used for processing to determine dataypes
-    attr_accessor :csv_column_datatypes
+    attr_accessor :csv_column_datatypes, :nullable
 
     #Initialize the csv_column_datatypes to a hash that would contain a hash of hashes during the course of execution
     def initialize(options)
       @options = options
       @csv_column_datatypes = {}
+      @nullable = []
     end
     
     def options
       @options
     end
 
+    def filename
+      @options[:filename]
+    end
+
     
     # Process a chunk of csv file for all possible datatypes towards each column in the row
-    def datatype_analysis(filename)
+    def datatype_analysis
       SmarterCSV.process(filename, {:col_sep => delimiter, :chunk_size => chunk_size, 
         :remove_empty_values => false, :remove_zero_values => false}) do |chunk|
         chunk.each do |row|
@@ -29,13 +35,21 @@ module CsvImportAnalyzer
             unless value == "" || value.nil? || value == "NULL"
               datatype = determine_dataype(value)
               add_to_datatype(key, datatype.to_sym)
+            else             
+              nullable.push(key) unless nullable.include?(key)
             end
           end
         end
         break
       end
+      puts csv_column_datatypes
       finalize_datatypes_for_csv
       puts csv_column_datatypes
+
+      options[:csv_column_datatypes] = csv_column_datatypes
+      options[:nullable] = nullable
+      query = CsvImportAnalyzer::SqlQueryBuilder.new(options)
+      puts query.generate_query
     end
 
     private
@@ -84,4 +98,4 @@ module CsvImportAnalyzer
   end
 end
 
-CsvImportAnalyzer::CsvDatatypeAnalysis.new({:delimiter => ",", :chunk => 20}).datatype_analysis("sampleTab.csv")
+# CsvImportAnalyzer::CsvDatatypeAnalysis.new({:delimiter => ",", :chunk => 20, :filename => "sampleTab.csv"}).datatype_analysis
