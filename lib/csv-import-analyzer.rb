@@ -13,4 +13,4 @@ module CsvImportAnalyzer
     end
   end
 end
-# CsvImportAnalyzer.process("sampleTab.csv", {:metadata_output => true})
+CsvImportAnalyzer.process("sampleTab.csv", {:metadata_output => true})

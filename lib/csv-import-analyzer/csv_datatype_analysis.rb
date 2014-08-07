@@ -43,11 +43,13 @@ module CsvImportAnalyzer
         break
       end
       puts csv_column_datatypes
+      # csv_datatype_analysis = csv_column_datatypes
+      options[:csv_datatype_analysis] = csv_column_datatypes.clone
       finalize_datatypes_for_csv
-      puts csv_column_datatypes
-
+      # puts csv_column_datatypes
       options[:csv_column_datatypes] = csv_column_datatypes
       options[:nullable] = nullable
+      # binding.pry
       query = CsvImportAnalyzer::SqlQueryBuilder.new(options)
       puts query.generate_query
     end

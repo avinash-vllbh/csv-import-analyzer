@@ -1,6 +1,7 @@
 require 'pry'
 require_relative "helpers/mysql_query_helper"
 require_relative "helpers/pg_query_helper"
+require_relative "export/metadata_analysis"
 module CsvImportAnalyzer
   class SqlQueryBuilder
     attr_accessor :create_query, :import_query, :csv_column_datatypes, :min_max_bounds, :nullable, :sql_helper_options
@@ -44,14 +45,6 @@ module CsvImportAnalyzer
       return options[:delimiter]
     end
 
-    # this didn't work - wonder why? Need to check on the reason behind it!!
-    # def sql_helper_options
-    #   return @sql_helper_options# = {tablename: tablename, filename: filename, delimiter: delimiter}
-    # end
-    # binding.pry
-    # @mysql_helper = CsvImportAnalyzer::Helper::MysqlQueryHelper.new(@sql_helper_options)
-    # @pg_helper = CsvImportAnalyzer::Helper::PgQueryHelper.new(@sql_helper_options)
-
     def mysql_helper
       @mysql_helper
     end
@@ -72,7 +65,8 @@ module CsvImportAnalyzer
       end
       prepare_sql_statements
       prepare_import_csv
-      return create_query, import_query
+      # return create_query, import_query
+      print_metadata_analysis
     end
 
     private
@@ -111,6 +105,13 @@ module CsvImportAnalyzer
         create_query[db] = create_query[db].join(", ")
         create_query[db] << ");"
       end
+    end
+
+    def print_metadata_analysis
+      options[:create_query] = create_query
+      options[:import_query] = import_query
+      export = CsvImportAnalyzer::MetadataAnalysis.new(options)
+      export.metadata_print
     end
 
   end

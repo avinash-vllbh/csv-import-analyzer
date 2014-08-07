@@ -56,7 +56,8 @@ module CsvImportAnalyzer
         :skip => 0, 
         :database => nil, 
         :quote_convert => true, 
-        :replace_nulls => true
+        :replace_nulls => true,
+        :out_format => :json
       }
     end
 
