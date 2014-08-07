@@ -1,10 +1,13 @@
 require "smarter_csv"
 require "tempfile"
 require_relative "analyzer/delimiter_identifier"
+require_relative "helpers/string_class_extensions"
+require_relative "helpers/common_functions"
 require_relative "csv_datatype_analysis"
 
 module CsvImportAnalyzer
   class CsvSanitizer
+    include CsvImportAnalyzer::Helper
 
 
 
@@ -73,20 +76,15 @@ module CsvImportAnalyzer
       return result
     end
 
-    def null_like
-      ["NULL", "Null", "NUll", "NULl", "null", nil, "", "NAN", "\\N"]
-    end
-
     # Replace all nil, "NAN", empty values with NULL for maintaining consistency during database import
     def replace_null_values(line)
       line.each do |value|
-        if null_like.include?(value)
+        if null_like?(value) #value.nil? || value.null_like?#.include?(value)
           replace_index = line.index(value)
           line[replace_index] = "NULL"
         end
       end
       return line
     end
-
   end
 end

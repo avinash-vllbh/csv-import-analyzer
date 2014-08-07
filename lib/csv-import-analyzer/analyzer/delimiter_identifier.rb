@@ -1,13 +1,17 @@
 require_relative "../helpers/string_class_extensions"
+require 'pry'
 
 module CsvImportAnalyzer
   module DelimiterIdentifier
     extend self
-      
-    @delimiter = {"," => 0, ";" => 0, "\t" => 0, "|" => 0}
 
-    def delimiter
-      @delimiter
+    attr_accessor :delimiter_count
+      
+    @delimiter = [",", ";", "\t", "|"]
+
+    def delimiter_count
+      @delimiter_count = Hash[@delimiter.map {|v| [v,0]}]
+      @delimiter_count
     end
 
     def getting_contents_of_quoted_values(input)
@@ -16,18 +20,18 @@ module CsvImportAnalyzer
     end
 
     def count_occurances_delimiter(line)
-      delimiter.keys.each do |key|
+      delimiter_count.keys.each do |key|
         #Count the occurances of delimiter in a line
         total_count_delimiter = line.substr_count(key)
         #count the occurances of delimiter between quotes inside a line to disregard them
         quoted_delimiter_count = getting_contents_of_quoted_values(line).substr_count(key)
-        delimiter[key] += total_count_delimiter - quoted_delimiter_count
+        delimiter_count[key] += total_count_delimiter - quoted_delimiter_count
       end
     end
 
     def return_plausible_delimiter
-      delimiter.each { |key, value| 
-        return key if value = delimiter.values.max
+      delimiter_count.each { |key, value| 
+        return key if value = delimiter_count.values.max
       }
     end
 
@@ -52,7 +56,7 @@ module CsvImportAnalyzer
           count_occurances_delimiter(line)
         end
       else
-        return InvalidInput.new
+        InvalidInput.new
       end
       return return_plausible_delimiter
     end
@@ -60,4 +64,4 @@ module CsvImportAnalyzer
   end
 end
 
-puts CsvImportAnalyzer::DelimiterIdentifier.identify_delimiter("/home/avinash/Desktop/csv-import-analyzer/spec/fixtures/sample.csv")
+# puts CsvImportAnalyzer::DelimiterIdentifier.identify_delimiter("/home/avinash/Desktop/csv-import-analyzer/spec/fixtures/sample.csv")

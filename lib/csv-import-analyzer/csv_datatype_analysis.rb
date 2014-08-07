@@ -2,15 +2,15 @@ require "smarter_csv"
 require "tempfile"
 require "pry"
 require_relative "helpers/datatype_validation"
+require_relative "helpers/common_functions"
 require_relative "sql_query_builder"
 
 module CsvImportAnalyzer
   class CsvDatatypeAnalysis
+    include CsvImportAnalyzer::Helper
 
-    #Create a getter and setter for csv_column_datatypes array to be a instance variable to be used for processing to determine dataypes
     attr_accessor :csv_column_datatypes, :nullable
 
-    #Initialize the csv_column_datatypes to a hash that would contain a hash of hashes during the course of execution
     def initialize(options)
       @options = options
       @csv_column_datatypes = {}
@@ -32,7 +32,7 @@ module CsvImportAnalyzer
         :remove_empty_values => false, :remove_zero_values => false}) do |chunk|
         chunk.each do |row|
           row.each do |key, value|
-            unless value == "" || value.nil? || value == "NULL"
+            unless null_like?(value)
               datatype = determine_dataype(value)
               add_to_datatype(key, datatype.to_sym)
             else             
