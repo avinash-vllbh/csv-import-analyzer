@@ -2,6 +2,7 @@ require "smarter_csv"
 require "tempfile"
 require "pry"
 require_relative "helpers/datatype_validation"
+require_relative "helpers/csv_check_bounds"
 require_relative "helpers/common_functions"
 require_relative "sql_query_builder"
 
@@ -42,16 +43,11 @@ module CsvImportAnalyzer
         end
         break
       end
-      puts csv_column_datatypes
-      # csv_datatype_analysis = csv_column_datatypes
-      options[:csv_datatype_analysis] = csv_column_datatypes.clone
+      options[:csv_datatype_analysis] = csv_column_datatypes.clone # To retain the current state of csv_column_datatypes since it's altered further
       finalize_datatypes_for_csv
-      # puts csv_column_datatypes
       options[:csv_column_datatypes] = csv_column_datatypes
       options[:nullable] = nullable
-      # binding.pry
-      query = CsvImportAnalyzer::SqlQueryBuilder.new(options)
-      puts query.generate_query
+      take_further_actions
     end
 
     private
@@ -97,7 +93,15 @@ module CsvImportAnalyzer
         end
       }
     end
+
+    #Decide if simple datatype analysis is enough or proced further
+    def take_further_actions
+      if options[:check_bounds]
+        min_max_bounds = CsvImportAnalyzer::Helper::CsvCheckBounds.new(options)
+        options[:min_max_bounds] = min_max_bounds.get_min_max_values
+      end
+        query = CsvImportAnalyzer::SqlQueryBuilder.new(options)
+        puts query.generate_query
+    end
   end
 end
-
-# CsvImportAnalyzer::CsvDatatypeAnalysis.new({:delimiter => ",", :chunk => 20, :filename => "sampleTab.csv"}).datatype_analysis

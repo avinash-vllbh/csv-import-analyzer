@@ -7,14 +7,13 @@ module CsvImportAnalyzer
     attr_accessor :create_query, :import_query, :csv_column_datatypes, :min_max_bounds, :nullable, :sql_helper_options
 
     # Since Building SQL is dependent on multiple things,
-    # decided to go with an argumnets hash that gets passed when creating an object for the class
+    # decided to go with an arguments hash that gets passed when creating an object for the class
     def initialize(args)
       @options = args
       @create_query = {}
       @import_query = {}
       @csv_column_datatypes = args[:csv_column_datatypes]
       @nullable = args[:nullable]
-      @databases = [:pg, :mysql]
       @sql_helper_options = {:tablename => tablename, :filename => @options[:filename], :delimiter => @options[:delimiter]}
       @mysql_helper = CsvImportAnalyzer::Helper::MysqlQueryHelper.new(@sql_helper_options)
       @pg_helper = CsvImportAnalyzer::Helper::PgQueryHelper.new(@sql_helper_options)
@@ -25,7 +24,7 @@ module CsvImportAnalyzer
     end
 
     def databases
-      @databases
+      options[:database]
     end
 
     def filename
@@ -65,7 +64,6 @@ module CsvImportAnalyzer
       end
       prepare_sql_statements
       prepare_import_csv
-      # return create_query, import_query
       print_metadata_analysis
     end
 

@@ -1,5 +1,8 @@
 require 'spec_helper'
 
+# CsvImportAnalyzer.process("sampleTab.csv", {:metadata_output => true})
+
+
 describe CsvImportAnalyzer do
   include CsvImportAnalyzer
   it 'should return invalid file as file not found' do
