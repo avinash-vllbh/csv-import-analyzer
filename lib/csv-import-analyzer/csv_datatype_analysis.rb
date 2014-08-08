@@ -98,10 +98,12 @@ module CsvImportAnalyzer
     def take_further_actions
       if options[:check_bounds]
         min_max_bounds = CsvImportAnalyzer::Helper::CsvCheckBounds.new(options)
-        options[:min_max_bounds] = min_max_bounds.get_min_max_values
+        res = min_max_bounds.get_min_max_values
+        options[:min_max_bounds] = res[:min_max]
+        options[:uniques] = res[:uniques]
       end
-        query = CsvImportAnalyzer::SqlQueryBuilder.new(options)
-        puts query.generate_query
+      query = CsvImportAnalyzer::SqlQueryBuilder.new(options)
+      query.generate_query
     end
   end
 end

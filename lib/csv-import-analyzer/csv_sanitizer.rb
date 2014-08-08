@@ -30,7 +30,6 @@ module CsvImportAnalyzer
             line = CSV.parse_line(line, {:col_sep => delimiter})
           end
           line = replace_null_values(line)
-          p line
         end
       end
       # Cleaned the file - Now analyze for datatypes

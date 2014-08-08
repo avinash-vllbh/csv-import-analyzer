@@ -7,12 +7,13 @@ module CsvImportAnalyzer
   module Helper
     class CsvCheckBounds
       include CsvImportAnalyzer::Helper
-      attr_accessor :min_max_bounds, :csv_column_datatypes, :options, :nullable
+      attr_accessor :min_max_bounds, :distinct_values, :csv_column_datatypes, :options, :nullable, :max_distinct_values
 
       def initialize(options)
         @csv_column_datatypes = options[:csv_column_datatypes]
         @options = options
         @min_max_bounds = {}
+        @distinct_values = {}
         @nullable = options[:nullable]
 
       end
@@ -26,6 +27,9 @@ module CsvImportAnalyzer
       def delimiter
         return options[:delimiter]
       end
+      def max_distinct_values
+        @max_distinct_values ||= Integer(options[:unique]) + 1
+      end
 
       def get_min_max_values
         SmarterCSV.process(filename, {:col_sep => delimiter, :chunk_size => chunk_size, 
@@ -34,13 +38,14 @@ module CsvImportAnalyzer
             row.each do |key, value|
               unless null_like?(value)
                 process_min_max_for_column(key, value)
+                process_distinct_values(key, value)
               else             
                 nullable.push(key) unless nullable.include?(key)
               end
             end
           end
         end
-        return min_max_bounds
+        return {:min_max => min_max_bounds, :uniques => distinct_values}
       end
 
       private
@@ -63,6 +68,17 @@ module CsvImportAnalyzer
         else
           min_max_bounds[key][:min] = value if value < min_max_bounds[key][:min]
           min_max_bounds[key][:max] = value if value > min_max_bounds[key][:max]
+        end
+      end
+
+      def process_distinct_values(key, value)
+        if distinct_values[key].nil?
+          distinct_values[key] = [value]
+        else
+          if distinct_values[key].size > max_distinct_values
+          else
+            distinct_values[key].push(value) unless distinct_values[key].include?(value)
+          end
         end
       end
 

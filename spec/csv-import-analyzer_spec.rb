@@ -1,4 +1,4 @@
-require 'spec_helper'
+# require 'spec_helper'
 
 # CsvImportAnalyzer.process("sampleTab.csv", {:metadata_output => true})
 

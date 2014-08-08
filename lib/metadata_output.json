@@ -13,32 +13,48 @@
       "datatype": "int",
       "datatype_analysis": {
         "int": 4
-      }
+      },
+      "distinct_values": [
+        1997,
+        1999,
+        1996
+      ]
     },
     "make_id": {
       "datatype": "string",
       "datatype_analysis": {
         "string": 4
-      }
+      },
+      "distinct_values": [
+        "Ford",
+        "Chevy",
+        "Jeep"
+      ]
     },
     "model_id": {
       "datatype": "string",
       "datatype_analysis": {
         "string": 4
-      }
+      },
+      "distinct_values": "3+"
     },
     "description_id": {
       "datatype": "string",
       "datatype_analysis": {
         "string": 2
       },
+      "distinct_values": [
+        "ac, abs, moon",
+        "MUST SELL!air, moon roof, loaded"
+      ],
       "nullable": true
     },
     "price_id": {
       "datatype": "float",
       "datatype_analysis": {
         "float": 4
-      }
+      },
+      "distinct_values": "3+"
     }
   },
   "sql": {

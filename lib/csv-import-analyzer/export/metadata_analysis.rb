@@ -2,7 +2,7 @@ require 'pry'
 require 'json'
 module CsvImportAnalyzer
   class MetadataAnalysis
-    attr_accessor :metadata
+    attr_accessor :metadata, :max_distinct_values
     def initialize(options)
       @options = options
       @metadata = {}
@@ -38,6 +38,14 @@ module CsvImportAnalyzer
 
     def import_queries
       @options[:import_query]
+    end
+
+    def unique_values
+      @options[:uniques]
+    end
+
+    def max_distinct_values
+      @max_distinct_values ||= Integer(options[:unique]) + 1
     end
 
     def metadata_print
@@ -119,11 +127,16 @@ module CsvImportAnalyzer
           columns[column_name] = {}
           columns[column_name][:datatype] = header_datatypes[column_name]
           columns[column_name][:datatype_analysis] = header_datatype_analysis[column_name]
+          if unique_values[column_name].size > max_distinct_values
+            columns[column_name][:distinct_values] = "#{max_distinct_values}+"
+          else
+            columns[column_name][:distinct_values] = unique_values[column_name]
+          end
           if nullable_columns.include?(column_name)
             columns[column_name][:nullable] = true
           end
-        rescue Exception
-          binding.pry
+        rescue Exception => e
+          puts e
         end
       end
       return columns
