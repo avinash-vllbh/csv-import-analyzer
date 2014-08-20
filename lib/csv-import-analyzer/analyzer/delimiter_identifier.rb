@@ -3,14 +3,15 @@ require 'pry'
 
 module CsvImportAnalyzer
   module DelimiterIdentifier
-    extend self
 
-    attr_accessor :delimiter_count
-      
-    @delimiter = [",", ";", "\t", "|"]
+    # attr_accessor :delimiter, :delimiter_count
+
+    def delimiter
+      @delimiter ||= [",", ";", "\t", "|"]
+    end
 
     def delimiter_count
-      @delimiter_count = Hash[@delimiter.map {|v| [v,0]}]
+      @delimiter_count ||= Hash[delimiter.map {|v| [v,0]}]
       @delimiter_count
     end
 
@@ -30,13 +31,11 @@ module CsvImportAnalyzer
     end
 
     def return_plausible_delimiter
-      delimiter_count.each { |key, value| 
-        return key if value = delimiter_count.values.max
-      }
+      return delimiter_count.key(delimiter_count.values.max)
     end
 
     def identify_delimiter(filename_or_sample)
-      #filename_or_sample input can be either a File or an Array or a string - Return delimiter for anything (if found)
+      #filename_or_sample input can be either a File or an Array or a string - Return delimiter for File or an Array of strings (if found)
       if filename_or_sample.class == String
         if File::exists?(filename_or_sample)
           current_line_number = 0
@@ -48,19 +47,19 @@ module CsvImportAnalyzer
             end
           end
         else
-          count_occurances_delimiter(line)
-          # return FileNotFound.new
+          # count_occurances_delimiter(filename_or_sample)
+          return FileNotFound.new
         end
+        return_plausible_delimiter
       elsif filename_or_sample.class == Array
         filename_or_sample.each do |line|
           count_occurances_delimiter(line)
         end
+        return_plausible_delimiter
       else
         InvalidInput.new
       end
-      return return_plausible_delimiter
     end
-
   end
 end
 
