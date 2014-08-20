@@ -3,7 +3,7 @@
 class DummyClass
 end
 
-describe 'identify_delimiter' do
+describe '#identify_delimiter' do
   
   before(:each) do
     @dummy_class = DummyClass.new
@@ -42,7 +42,7 @@ describe 'identify_delimiter' do
   end
 end
 
-describe 'return_plausible_delimiter' do
+describe '#return_plausible_delimiter' do
   before(:each) do
     @dummy_class = DummyClass.new
     @dummy_class.extend(CsvImportAnalyzer::DelimiterIdentifier)
