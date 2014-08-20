@@ -59,8 +59,9 @@ module CsvImportAnalyzer
 
     def replace_line_single_quotes(line, delimiter)
       delimiter = "\\|" if delimiter == "|"
-      pattern = "#{delimiter}'.*?'#{delimiter}"
+      pattern = "#{delimiter}'.*?'#{delimiter}" # set the pattern to opening and closing single quote found between delimiters
       res = line.gsub(/#{pattern}/)
+      binding.pry
       result = res.each { |match|
         replace = "#{delimiter}\""
         replace = "\|\"" if delimiter == "\\|"
@@ -69,7 +70,7 @@ module CsvImportAnalyzer
         replace = "\"\|" if delimiter == "\\|"
         match = match.gsub(/'#{delimiter}$/,replace)
       }
-      result = result.gsub(/''/,'\'')
+      result = result.gsub(/''/,'\'') #replace any single quote that might have been used twice to escape single quote before 
       return result
     end
 
