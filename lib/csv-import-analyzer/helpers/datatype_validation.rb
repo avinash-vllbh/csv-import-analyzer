@@ -50,7 +50,6 @@ module CsvImportAnalyzer
         end
         return "string"
       end
-
     end
   end
 end
