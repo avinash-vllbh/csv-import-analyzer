@@ -45,8 +45,17 @@ describe '#validate_field' do
   end
   
   context 'it knows what a date looks like' do
-    it 'return true for a valid date type - mm/dd/yyyy' do
+    it 'return true for a valid date type - dd/mm/yyyy' do
       expect(@dummy_class.validate_field('31/12/2014')).to eq("date")
+    end
+    it 'return true for a valid date type - mm/dd/yyyy' do
+      expect(@dummy_class.validate_field('12/31/2014')).to eq("date")
+    end
+    it 'return true for a valid date type - mm-dd-yyyy' do
+      expect(@dummy_class.validate_field('12-31-2014')).to eq("date")
+    end
+    it 'return true for a valid date type - mm dd yyyy' do
+      expect(@dummy_class.validate_field('12 31 2014')).to eq("date")
     end
   end 
 

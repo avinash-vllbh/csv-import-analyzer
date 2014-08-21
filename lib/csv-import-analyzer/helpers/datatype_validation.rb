@@ -7,6 +7,18 @@ module CsvImportAnalyzer
 
     private
     ###
+    # Date.parse("12/31/20145234", "%m/%d/%Y") => true which is not supposed to be true
+    # Validate year part has only 4 numbers in it
+    ###
+    def validate_year_date(field)
+      field = field.to_s.scan(/\d*/) # Return an array with patterns matching with only numbers in it
+      if field[0].length == 4
+        return true
+      else
+        return false
+      end
+    end
+    ###
     # To check for pattern of Date format after Date.parse is successfull
     # Date.parse(3000) => true which is not supposed to be true
     ###
@@ -38,7 +50,7 @@ module CsvImportAnalyzer
         return "int"
       elsif(Float(num) rescue false)
         return "float"
-      elsif(Date.parse(field) or Date.strptime(field, '%m/%d/%Y') or Date.strptime(field, '%m-%d-%Y') or Date.strptime(field, '%m %d %Y') rescue false)
+      elsif(Date.parse(field) rescue false || Date.strptime(field, '%m/%d/%Y') rescue false || Date.strptime(field, '%m-%d-%Y') rescue false || Date.strptime(field, '%m %d %Y') rescue false)
         if datetime_pattern(field)
           if field =~ /:/ # To check if the field contains any pattern for Hours:minutes
             return "datetime"
