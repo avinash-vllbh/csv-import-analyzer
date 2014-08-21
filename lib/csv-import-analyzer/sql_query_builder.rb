@@ -1,6 +1,6 @@
 require 'pry'
-require_relative "helpers/mysql_query_helper"
-require_relative "helpers/pg_query_helper"
+require_relative "query_builder/mysql_query_helper"
+require_relative "query_builder/pg_query_helper"
 require_relative "export/metadata_analysis"
 module CsvImportAnalyzer
   class SqlQueryBuilder
@@ -15,8 +15,8 @@ module CsvImportAnalyzer
       @csv_column_datatypes = args[:csv_column_datatypes]
       @nullable = args[:nullable]
       @sql_helper_options = {:tablename => tablename, :filename => @options[:filename], :delimiter => @options[:delimiter]}
-      @mysql_helper = CsvImportAnalyzer::Helper::MysqlQueryHelper.new(@sql_helper_options)
-      @pg_helper = CsvImportAnalyzer::Helper::PgQueryHelper.new(@sql_helper_options)
+      @mysql_helper = CsvImportAnalyzer::MysqlQueryHelper.new(@sql_helper_options)
+      @pg_helper = CsvImportAnalyzer::PgQueryHelper.new(@sql_helper_options)
     end
 
     def options
@@ -41,7 +41,7 @@ module CsvImportAnalyzer
     end
 
     def delimiter
-      return options[:delimiter]
+      options[:delimiter]
     end
 
     def mysql_helper
