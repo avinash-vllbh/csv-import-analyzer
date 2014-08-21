@@ -66,5 +66,10 @@ describe '#validate_field' do
     it 'returns String type as string' do
       expect(@dummy_class.validate_field("Hello")).to eq("string")
     end
+    it 'returns String type of dates as string' do
+      expect(@dummy_class.validate_field("12 31 2014312")).to eq("string")
+      expect(@dummy_class.validate_field("12-31-2014312")).to eq("string")
+      expect(@dummy_class.validate_field("12/31/2014312")).to eq("string")
+    end
   end
 end
