@@ -2,15 +2,6 @@ require_relative "../helpers/errors"
 require 'pry'
 module CsvImportAnalyzer
   module MysqlQueryHelper
-
-    # attr_accessor :tablename, :filename, :delimiter
-
-    # def initialize(args)
-    #   # binding.pry
-    #   @tablename = args[:tablename]
-    #   @filename = args[:filename]
-    #   @delimiter = args[:delimiter]
-    # end
   
     def form_query_for_datatype(args)
       unless args[:datatype].nil? || args[:header].nil?
@@ -38,11 +29,3 @@ module CsvImportAnalyzer
 
   end
 end
-
-# if datatype == :string
-#   query[:pg] = header.to_s+" varachar(255)"
-#   query[:mysql] = header.to_s+" varachar(255)"
-# else
-#   query[:pg] = header.to_s + " " + datatype.to_s
-#   query[:mysql] = header.to_s + " " + datatype.to_s
-# end
