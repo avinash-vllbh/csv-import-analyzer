@@ -2,7 +2,7 @@ require_relative "../helpers/errors"
 require "pry"
 module CsvImportAnalyzer
   module PgQueryHelper
-  
+
     def form_query_for_datatype(args)
       unless args[:datatype].nil? || args[:header].nil?
         if args[:datatype] == :string
