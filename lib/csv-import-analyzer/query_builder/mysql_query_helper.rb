@@ -11,7 +11,7 @@ module CsvImportAnalyzer
           return args[:header].to_s + " " + args[:datatype].to_s
         end
       else
-        MissingRequiredArgumentsError.new("Required arguments missing for form_query_for_datatype")
+        MissingRequiredArguments.new("Required arguments missing for form_query_for_datatype")
       end
     end
 
@@ -23,7 +23,7 @@ module CsvImportAnalyzer
               "LINES TERMINATED BY '\\n' "+
               "IGNORE 1 LINES;"
       else
-        MissingRequiredArgumentsError.new("Required arguments missing for import_csv")
+        MissingRequiredArguments.new("Required arguments missing for import_csv")
       end
     end
 

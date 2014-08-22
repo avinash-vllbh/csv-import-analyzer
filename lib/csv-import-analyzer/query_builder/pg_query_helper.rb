@@ -11,7 +11,7 @@ module CsvImportAnalyzer
           return args[:header].to_s + " " + args[:datatype].to_s
         end
       else
-        MissingRequiredArgumentsError.new("Required arguments missing for form_query_for_datatype")
+        MissingRequiredArguments.new("Required arguments missing for form_query_for_datatype")
       end
     end
 
@@ -19,7 +19,7 @@ module CsvImportAnalyzer
       unless args[:tablename].nil? || args[:filename].nil? || args[:delimiter].nil?
         pg_import_statement = "COPY #{args[:tablename]} FROM '#{args[:filename]}' HEADER DELIMITER '#{args[:delimiter]}' CSV NULL AS 'NULL';"
       else
-        MissingRequiredArgumentsError.new("Required arguments missing for import_csv")
+        MissingRequiredArguments.new("Required arguments missing for import_csv")
       end
     end
 

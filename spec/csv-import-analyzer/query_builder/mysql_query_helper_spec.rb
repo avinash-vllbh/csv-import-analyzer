@@ -10,10 +10,10 @@ describe '#form_query_for_datatype' do
     let(:args) {Hash[:header => :test]}
     let(:args1) {Hash[:datatype, :test]}
     it ' returns missing arguments error' do
-      expect(@dummy_class.form_query_for_datatype(args)).to be_instance_of(MissingRequiredArgumentsError)
+      expect(@dummy_class.form_query_for_datatype(args)).to be_instance_of(MissingRequiredArguments)
     end
     it 'returns invalid if set to nil' do
-      expect(@dummy_class.form_query_for_datatype(args1)).to be_instance_of(MissingRequiredArgumentsError)
+      expect(@dummy_class.form_query_for_datatype(args1)).to be_instance_of(MissingRequiredArguments)
     end
   end
 
@@ -38,10 +38,10 @@ describe '#import_csv' do
     let(:args) {Hash[:tablename => "test", :delimiter => ","]}
     let(:args1) {Hash[:filename => "test"]}
     it ' return SqlQueryErrror' do
-      expect(@dummy_class.import_csv(args)).to be_instance_of(MissingRequiredArgumentsError)
+      expect(@dummy_class.import_csv(args)).to be_instance_of(MissingRequiredArguments)
     end
     it 'should return SqlQueryErrror' do
-      expect(@dummy_class.import_csv(args1)).to be_instance_of(MissingRequiredArgumentsError)
+      expect(@dummy_class.import_csv(args1)).to be_instance_of(MissingRequiredArguments)
     end
   end
 

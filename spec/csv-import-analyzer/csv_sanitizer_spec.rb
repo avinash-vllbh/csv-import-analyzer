@@ -10,7 +10,6 @@ describe CsvImportAnalyzer::CsvSanitizer do
   let (:test) {"\"t1\", 't2', \"t3\""}
   let (:res) {"\"t1\", \"t2\", \"t3\""}
   it 'should replace single quotes to double' do
-    
     expect(csv_sanitizer.send(:replace_line_single_quotes, test, ",")).to eq(res)
   end
   context 'testing private methods' do
