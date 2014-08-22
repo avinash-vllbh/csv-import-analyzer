@@ -2,7 +2,7 @@ require "smarter_csv"
 require "tempfile"
 require "pry"
 require_relative "helpers/datatype_validation"
-require_relative "helpers/csv_check_bounds"
+require_relative "analyzer/csv_check_bounds"
 require_relative "helpers/common_functions"
 require_relative "sql_query_builder"
 

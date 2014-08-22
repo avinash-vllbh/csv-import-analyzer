@@ -1,14 +1,15 @@
 require 'smarter_csv'
 require 'pry'
 require_relative "../helpers/common_functions"
-
+require_relative "../helpers/errors"
 
 module CsvImportAnalyzer
   class CsvCheckBounds
     include CsvImportAnalyzer::Helper
+    
     attr_accessor :min_max_bounds, :distinct_values, :csv_column_datatypes, :options, :nullable, :max_distinct_values
 
-    def initialize(options)
+    def initialize(options = {})
       @csv_column_datatypes = options[:csv_column_datatypes]
       @options = options
       @min_max_bounds = {}
@@ -32,20 +33,28 @@ module CsvImportAnalyzer
 
     # Public interface that is called - Processes the CSV file for min & max values for each column
     def get_min_max_values
-      SmarterCSV.process(filename, {:col_sep => delimiter, :chunk_size => chunk_size, 
-      :remove_empty_values => false, :remove_zero_values => false}) do |chunk|
-        chunk.each do |row|
-          row.each do |key, value|
-            unless null_like?(value)
-              process_min_max_for_column(key, value)
-              process_distinct_values(key, value)
-            else             
-              nullable.push(key) unless nullable.include?(key)
+      unless filename.nil?
+        if File.exist?(filename)
+          SmarterCSV.process(filename, {:col_sep => delimiter, :chunk_size => chunk_size, 
+          :remove_empty_values => false, :remove_zero_values => false}) do |chunk|
+            chunk.each do |row|
+              row.each do |key, value|
+                unless null_like?(value)
+                  process_min_max_for_column(key, value)
+                  process_distinct_values(key, value)
+                else             
+                  nullable.push(key) unless nullable.include?(key)
+                end
+              end
             end
           end
+          return {:min_max => min_max_bounds, :uniques => distinct_values}
+        else
+          FileNotFound.new
         end
+      else
+        MissingRequiredArguments.new("valid filename is required to check bounds")
       end
-      return {:min_max => min_max_bounds, :uniques => distinct_values}
     end
 
     private

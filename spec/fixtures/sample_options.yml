@@ -1,0 +1,11 @@
+preferences:
+  metadata_output: nil
+  processed_input: nil
+  unique: 10
+  check_bounds: true
+  datatype_analysis: 200
+  chunk: 20
+  database: [pg, mysql]
+  quote_convert: true
+  replace_nulls: true
+  out_format: :json
