@@ -9,8 +9,7 @@ require_relative "csv_datatype_analysis"
 module CsvImportAnalyzer
   class CsvSanitizer
     include CsvImportAnalyzer::Helper
-
-
+    include CsvImportAnalyzer::DelimiterIdentifier
 
     def process(filename, options)
 
@@ -18,7 +17,7 @@ module CsvImportAnalyzer
       if File.exist?(filename)
         options[:filename] = filename
         #first thing to do - find the delimiter of the file.
-        delimiter = CsvImportAnalyzer::DelimiterIdentifier.identify_delimiter(filename)
+        delimiter = identify_delimiter(filename)
         options[:delimiter] = delimiter
         File.foreach(filename) do |line|
           #Check if the line is empty - no point in processing empty lines
@@ -61,7 +60,6 @@ module CsvImportAnalyzer
       delimiter = "\\|" if delimiter == "|"
       pattern = "#{delimiter}'.*?'#{delimiter}" # set the pattern to opening and closing single quote found between delimiters
       res = line.gsub(/#{pattern}/)
-      binding.pry
       result = res.each { |match|
         replace = "#{delimiter}\""
         replace = "\|\"" if delimiter == "\\|"

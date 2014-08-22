@@ -4,6 +4,7 @@ require_relative "query_builder/pg_query_helper"
 require_relative "export/metadata_analysis"
 module CsvImportAnalyzer
   class SqlQueryBuilder
+    # include CsvImportAnalyzer::mysql_query_helper
     attr_accessor :create_query, :import_query, :csv_column_datatypes, :min_max_bounds, :nullable, :sql_helper_options
 
     # Since Building SQL is dependent on multiple things,
@@ -15,8 +16,8 @@ module CsvImportAnalyzer
       @csv_column_datatypes = args[:csv_column_datatypes]
       @nullable = args[:nullable]
       @sql_helper_options = {:tablename => tablename, :filename => @options[:filename], :delimiter => @options[:delimiter]}
-      @mysql_helper = CsvImportAnalyzer::MysqlQueryHelper.new(@sql_helper_options)
-      @pg_helper = CsvImportAnalyzer::PgQueryHelper.new(@sql_helper_options)
+      @mysql_helper.extend(CsvImportAnalyzer::MysqlQueryHelper)
+      @pg_helper.extend(CsvImportAnalyzer::PgQueryHelper)
     end
 
     def options
@@ -73,9 +74,9 @@ module CsvImportAnalyzer
       query = {}
       databases.each do |db|
         if db == :mysql
-          query[db] = mysql_helper.form_query_for_datatype(header, datatype)
+          query[db] = mysql_helper.form_query_for_datatype(header: header, datatype: datatype)
         else
-          query[db] = pg_helper.form_query_for_datatype(header, datatype)
+          query[db] = pg_helper.form_query_for_datatype(header: header, datatype: datatype)
         end
       end
       unless nullable.include?(header)
@@ -89,9 +90,9 @@ module CsvImportAnalyzer
     def prepare_import_csv
       databases.each do |db|
         if db == :mysql
-          import_query[db] = mysql_helper.import_csv
+          import_query[db] = mysql_helper.import_csv(tablename: tablename, filename: filename, delimiter: delimiter)
         elsif db == :pg
-          import_query[db] = pg_helper.import_csv
+          import_query[db] = pg_helper.import_csv(tablename: tablename, filename: filename, delimiter: delimiter)
         end
       end
     end

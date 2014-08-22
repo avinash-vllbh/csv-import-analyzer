@@ -54,7 +54,7 @@ describe '#return_plausible_delimiter' do
     end
 
     it 'returns semicolon as the delimiter for sample delimiter_count' do
-      @dummy_class.stub(:delimiter_count) { Hash[","=>15, ";"=>16, "\t"=>0, "|"=>0] }
+      @dummy_class.stub(:delimiter_count).and_return(Hash[","=>15, ";"=>16, "\t"=>0, "|"=>0])
       expect(@dummy_class.return_plausible_delimiter).to eq(";")
     end
   end  

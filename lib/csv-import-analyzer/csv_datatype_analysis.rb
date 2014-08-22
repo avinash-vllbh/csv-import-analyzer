@@ -9,6 +9,7 @@ require_relative "sql_query_builder"
 module CsvImportAnalyzer
   class CsvDatatypeAnalysis
     include CsvImportAnalyzer::Helper
+    include CsvImportAnalyzer::DatatypeValidator
 
     attr_accessor :csv_column_datatypes, :nullable
 
@@ -64,7 +65,7 @@ module CsvImportAnalyzer
     #Is this the right way to hide dependency on the external classes or objects
     #May be a static would do ? Should I create an object and call method on the object each time rather than instantiate a new object each time ??
     def determine_dataype(value)
-      return CsvImportAnalyzer::Helper::DatatypeValidator.new().validate_field(value)
+      return validate_field(value)
     end
 
     # Build the hash of hashes which hold the count of different possible datatypes for each row
@@ -97,7 +98,7 @@ module CsvImportAnalyzer
     #Decide if simple datatype analysis is enough or proced further
     def take_further_actions
       if options[:check_bounds]
-        min_max_bounds = CsvImportAnalyzer::Helper::CsvCheckBounds.new(options)
+        min_max_bounds = CsvImportAnalyzer::CsvCheckBounds.new(options)
         res = min_max_bounds.get_min_max_values
         options[:min_max_bounds] = res[:min_max]
         options[:uniques] = res[:uniques]
