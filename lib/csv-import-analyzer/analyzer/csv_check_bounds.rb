@@ -14,7 +14,7 @@ module CsvImportAnalyzer
       @options = options
       @min_max_bounds = {}
       @distinct_values = {}
-      @nullable = options[:nullable]
+      @nullable = options[:nullable] || []
 
     end
 

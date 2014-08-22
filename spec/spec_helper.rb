@@ -1,3 +1,5 @@
+require 'simplecov'
+SimpleCov.start
 require 'csv-import-analyzer'
 $sample_csv_path = "/home/avinash/Desktop/csv-import-analyzer/spec/fixtures/sample.csv"
 $sample_ssv_path = "/home/avinash/Desktop/csv-import-analyzer/spec/fixtures/semicolon-sample.csv"
