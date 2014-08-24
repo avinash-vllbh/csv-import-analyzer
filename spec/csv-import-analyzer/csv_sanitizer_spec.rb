@@ -1,9 +1,8 @@
 # require 'spec_helper'
+
 require 'pry'
 describe CsvImportAnalyzer::CsvSanitizer do
   let (:csv_sanitizer) { CsvImportAnalyzer::CsvSanitizer.new }
-  # let (:test) {["t1","t2","",nil,"t3"]}
-  # let (:res) {["t1","t2","NULL","NULL","t3"]}
   it 'should handle file not found issue' do
     expect(csv_sanitizer.process("sample.csv", options = {})).to be_instance_of(FileNotFound)
   end

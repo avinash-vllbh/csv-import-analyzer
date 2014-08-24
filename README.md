@@ -1,10 +1,10 @@
 # Csv::Import::Analyzer
 
-Perform Datatype analysis on desired chunck
-Perfrom min-max bounds for each column
+Perform datatype analysis on desired chunk
+Calculate min-max bounds for each column
 Determine which coulmns are nullable in the csv file
 
-Note: This gem expects the first line to be definitve header as in like column names if the csv file has to be imported to database.
+Note: This gem expects the first line to be definitve header, as in like column names if the csv file has to be imported to database.
 
 ## Installation
 
