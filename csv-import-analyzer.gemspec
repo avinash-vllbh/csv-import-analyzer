@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["avinash.vallab@gmail.com"]
   spec.description   = %q{Santize large csv files and help in predicting datatypes including min max values for easy import to SQL}
   spec.summary       = %q{To process large csv files and predict valid datatypes of each column for easy import into SQL}
-  spec.homepage      = ""
+  spec.homepage      = "http://rubygems.org/gems/csv-import-analyzer"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -19,11 +19,11 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.6"
-  spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "pry"
-  spec.add_development_dependency "rspec"
-  spec.add_development_dependency "simplecov"
+  spec.add_development_dependency "rake", "~> 10"
+  spec.add_development_dependency "pry", "~> 0.10"
+  spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "simplecov", "~> 0.9"
   
   spec.add_runtime_dependency "smarter_csv", "~> 1.0.17"
-  spec.add_runtime_dependency "roo"
+  spec.add_runtime_dependency "roo", "~> 1.13"
 end
