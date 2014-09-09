@@ -34,10 +34,16 @@ Calling process on a filename would generate a metadata_output.json which has th
 
 ## TODO:
   <ul>
+    <li> Handle control of processed input file to user </li>
     <li> Return the analysis as Json object.</li>
-    <li> Structuring the analysis outputted to csv better </li>
+    <li> Better - Structuring the analysis outputted to csv</li>
+    <li> Add support to convert and import xlsx files to csv </li>
   </ul>
 
+## Additional Information
+
+# Dependencies
+  <ul><li>smarter_csv - https://github.com/tilo/smarter_csv</li></ul>
 ## Contributing
 
 1. Fork it ( https://github.com/avinash-vllbh/csv-import-analyzer/fork )

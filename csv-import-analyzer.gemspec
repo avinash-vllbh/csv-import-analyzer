@@ -25,5 +25,4 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "simplecov", "~> 0.9"
   
   spec.add_runtime_dependency "smarter_csv", "~> 1.0.17"
-  spec.add_runtime_dependency "roo", "~> 1.13"
 end
