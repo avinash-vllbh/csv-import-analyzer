@@ -60,11 +60,11 @@
   "sql": {
     "pg": {
       "create_query": "create table sampletab.csv ( year_id int not null, make_id varchar(255) not null, model_id varchar(255) not null, description_id varchar(255), price_id float not null);",
-      "import_query": "COPY sampletab.csv FROM '/home/avinash/Desktop/csv-import-analyzer/lib/sampleTab.csv' HEADER DELIMITER ',' CSV NULL AS 'NULL';"
+      "import_query": "COPY sampletab.csv FROM '/home/avinash/Desktop/csv-import-analyzer/samples/sampleTab.csv' HEADER DELIMITER ',' CSV NULL AS 'NULL';"
     },
     "mysql": {
       "create_query": "create table sampletab.csv ( year_id int not null, make_id varchar(255) not null, model_id varchar(255) not null, description_id varchar(255), price_id float not null);",
-      "import_query": "COPY sampletab.csv FROM '/home/avinash/Desktop/csv-import-analyzer/lib/sampleTab.csv' HEADER DELIMITER ',' CSV NULL AS 'NULL';"
+      "import_query": "COPY sampletab.csv FROM '/home/avinash/Desktop/csv-import-analyzer/samples/sampleTab.csv' HEADER DELIMITER ',' CSV NULL AS 'NULL';"
     }
   }
 }
