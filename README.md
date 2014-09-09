@@ -23,12 +23,14 @@ Or install it yourself as:
     $ gem install csv-import-analyzer
 
 ## Usage
-    
-    Calling process on a filename would generate a metadata_output.json which has the Delimiter, Datatype Analysis and SQL (create and import) statements for both PostgreSQL and MySQL
 
-    ```ruby
-      CsvImportAnalyzer.process(filename)
-    ```
+Calling process on a filename would generate a metadata_output.json which has the Delimiter, Datatype Analysis and SQL (create and import) statements for both PostgreSQL and MySQL
+
+```ruby
+
+  CsvImportAnalyzer.process(filename)
+  
+```
 
 ## TODO:
   <ul>
