@@ -42,8 +42,9 @@ Calling process on a filename would generate a metadata_output.json which has th
 
 ## Additional Information
 
-# Dependencies
-  <ul><li>smarter_csv - https://github.com/tilo/smarter_csv</li></ul>
+### Dependencies
+  <ul><li><a href="https://github.com/tilo/smarter_csv">smarter_csv</a> - For processing the csv in chunks</li></ul>
+  
 ## Contributing
 
 1. Fork it ( https://github.com/avinash-vllbh/csv-import-analyzer/fork )
