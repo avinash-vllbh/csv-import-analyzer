@@ -3,6 +3,8 @@ class DummyClass
 end
 describe '#form_query_for_datatype' do
   before(:each) do
+    # Creating a dummy object to test the modules.
+    # Extending with dummy object by adding module methods to it using extend
     @dummy_class = DummyClass.new
     @dummy_class.extend(CsvImportAnalyzer::PgQueryHelper)
   end
@@ -16,7 +18,6 @@ describe '#form_query_for_datatype' do
       expect(@dummy_class.form_query_for_datatype(args1)).to be_instance_of(MissingRequiredArguments)
     end
   end
-
   context 'expected arguments are set' do
     let(:args) {Hash[:header => :test, :datatype => :string]}
     let(:args1) {Hash[:header => :test, :datatype => :integer]}
@@ -27,7 +28,6 @@ describe '#form_query_for_datatype' do
       expect(@dummy_class.form_query_for_datatype(args1)).to eq("test integer")
     end
   end
-
 end
 describe '#import_csv' do
   before(:each) do
