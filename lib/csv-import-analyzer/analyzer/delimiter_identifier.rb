@@ -1,5 +1,4 @@
 require_relative "../helpers/string_class_extensions"
-require 'pry'
 
 module CsvImportAnalyzer
   module DelimiterIdentifier
@@ -62,5 +61,3 @@ module CsvImportAnalyzer
     end
   end
 end
-
-# puts CsvImportAnalyzer::DelimiterIdentifier.identify_delimiter("/home/avinash/Desktop/csv-import-analyzer/spec/fixtures/sample.csv")
