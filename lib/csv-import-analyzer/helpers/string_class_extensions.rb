@@ -1,4 +1,3 @@
-require 'pry'
 class String
   #Extending string class to return the count of substr inside a string
   def substr_count(needle)
