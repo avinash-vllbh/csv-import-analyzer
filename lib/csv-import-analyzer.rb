@@ -1,4 +1,3 @@
-require 'pry'
 require_relative "csv-import-analyzer/csv_sanitizer"
 require_relative "csv-import-analyzer/helpers/errors"
 module CsvImportAnalyzer
