@@ -6,7 +6,9 @@ describe CsvImportAnalyzer::CsvSanitizer do
   it 'should handle file not found issue' do
     expect(csv_sanitizer.process("sample.csv", options = {})).to be_instance_of(FileNotFound)
   end
-  #Testing private methods - Although one should really have to test private methods, it's 
+  
+  # Testing private methods - Although one shouldn't really have to test private methods
+  # Testing here to make sure the private methods are doing what they are supposed to
   context 'testing private methods' do
     let (:test) {"\"t1\", 't2', \"t3\""}
     let (:res) {"\"t1\", \"t2\", \"t3\""}
