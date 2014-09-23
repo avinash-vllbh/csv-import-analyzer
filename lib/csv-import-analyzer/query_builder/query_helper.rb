@@ -1,5 +1,5 @@
 require_relative "../helpers/errors"
-require "pry"
+
 module CsvImportAnalyzer
   module QueryHelper
 
