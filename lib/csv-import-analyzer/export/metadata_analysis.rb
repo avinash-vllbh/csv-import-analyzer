@@ -1,4 +1,3 @@
-require 'pry'
 require 'json'
 module CsvImportAnalyzer
   class MetadataAnalysis
