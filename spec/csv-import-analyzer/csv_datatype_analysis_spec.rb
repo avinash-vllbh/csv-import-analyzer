@@ -1,1 +1,0 @@
-# CsvImportAnalyzer::CsvDatatypeAnalysis.new({:delimiter => ",", :chunk => 20, :filename => "sampleTab.csv"}).datatype_analysis
