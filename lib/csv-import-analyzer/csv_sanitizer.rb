@@ -1,5 +1,6 @@
 require "smarter_csv"
 require "tempfile"
+require "pry"
 require_relative "analyzer/delimiter_identifier"
 require_relative "helpers/string_class_extensions"
 require_relative "helpers/common_functions"
@@ -15,23 +16,33 @@ module CsvImportAnalyzer
 
       options = defaults.merge(options)
       if File.exist?(filename)
-        options[:filename] = filename
+        # options[:filename] = filename
         #first thing to do - find the delimiter of the file.
         delimiter = identify_delimiter(filename)
         options[:delimiter] = delimiter
+        # create a tempfile to update any changes being made
+        temp_file, processed_file = create_tempfiles(filename, options)
+        options[:temp_file] = temp_file.path
+        line_count = 1
         File.foreach(filename) do |line|
           #Check if the line is empty - no point in processing empty lines
           if line.length > 1
             line = replace_line_single_quotes(line,delimiter)
             begin
               line = CSV.parse_line(line, {:col_sep => delimiter})
-            rescue CSV::MalformedCSVError => error
-              line = "#{line}\""
+            rescue CSV::MalformedCSVError
+              temp_file.write("MalformedCSVError at line #{line_count}")
+              # line = "#{line}\""
+              line = line.insert(-2, "\"")
               line = CSV.parse_line(line, {:col_sep => delimiter})
             end
             line = replace_null_values(line)
+            processed_file.write(line.to_csv)
           end
+          line_count += 1
         end
+        temp_file.close
+        processed_file.close
         # Cleaned the file - Now analyze for datatypes
         CsvImportAnalyzer::CsvDatatypeAnalysis.new(options).datatype_analysis
       else
@@ -81,6 +92,19 @@ module CsvImportAnalyzer
         end
       end
       return line
+    end
+
+    # Returns the file handler for a temp file.
+    # This tempfile holds any modifications being done to the file.
+    def create_tempfiles(filename, options)
+      filename = File.basename(filename)
+      processed_filename = File.join(Dir.tmpdir, "processed_"+filename)
+      options[:filename] = processed_filename
+      filename += Time.now.strftime("%Y%m%d%H%M%S")
+      # temp_file = Tempfile.new(filename)
+      temp_file = File.open(File.join(Dir.tmpdir, filename), "w+")
+      processed_file = File.open(processed_filename, "w+")
+      return temp_file, processed_file
     end
   end
 end
