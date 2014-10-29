@@ -4,6 +4,7 @@ require_relative "helpers/datatype_validation"
 require_relative "analyzer/csv_check_bounds"
 require_relative "helpers/common_functions"
 require_relative "sql_query_builder"
+require "pry"
 
 module CsvImportAnalyzer
   class CsvDatatypeAnalysis

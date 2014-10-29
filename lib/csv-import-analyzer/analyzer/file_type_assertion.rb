@@ -16,11 +16,7 @@ module CsvImportAnalyzer
         end
       end
 
-      def self.convert_excel_to_csv
-
-      end
-
-      def csv_clean
+      def convert_excel_to_csv
 
       end
 

@@ -16,7 +16,6 @@ module CsvImportAnalyzer
 
       options = defaults.merge(options)
       if File.exist?(filename)
-        # options[:filename] = filename
         #first thing to do - find the delimiter of the file.
         delimiter = identify_delimiter(filename)
         options[:delimiter] = delimiter
@@ -31,13 +30,16 @@ module CsvImportAnalyzer
             begin
               line = CSV.parse_line(line, {:col_sep => delimiter})
             rescue CSV::MalformedCSVError
+              ##
+              # MalformedCSVError is due to illegal quoting or unclosed quotes
+              # Try to add a quote at the end and resume processing
+              # Log the changes to report
               temp_file.write("MalformedCSVError at line #{line_count}")
-              # line = "#{line}\""
               line = line.insert(-2, "\"")
               line = CSV.parse_line(line, {:col_sep => delimiter})
             end
             line = replace_null_values(line)
-            processed_file.write(line.to_csv)
+            processed_file.write(line.to_csv({:col_sep => delimiter, :converters => :numeric}))
           end
           line_count += 1
         end
@@ -97,12 +99,15 @@ module CsvImportAnalyzer
     # Returns the file handler for a temp file.
     # This tempfile holds any modifications being done to the file.
     def create_tempfiles(filename, options)
+      options[:original_filename] = filename
       filename = File.basename(filename)
       processed_filename = File.join(Dir.tmpdir, "processed_"+filename)
       options[:filename] = processed_filename
-      filename += Time.now.strftime("%Y%m%d%H%M%S")
+      # filename += Time.now.strftime("%Y%m%d%H%M%S")
       # temp_file = Tempfile.new(filename)
-      temp_file = File.open(File.join(Dir.tmpdir, filename), "w+")
+      # temp_file = File.open(File.join(Dir.tmpdir, filename), "w+")
+      temp_file = File.join(Dir.tmpdir, "error_report_"+filename)
+      temp_file = File.open(temp_file, "w+")
       processed_file = File.open(processed_filename, "w+")
       return temp_file, processed_file
     end

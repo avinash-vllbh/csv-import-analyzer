@@ -14,7 +14,6 @@ module CsvImportAnalyzer
       @min_max_bounds = {}
       @distinct_values = {}
       @nullable = options[:nullable] || []
-
     end
 
     def filename
@@ -30,10 +29,14 @@ module CsvImportAnalyzer
       @max_distinct_values ||= Integer(options[:unique]) + 1
     end
 
-    # Public interface that is called - Processes the CSV file for min & max values for each column
+    # Public interface for CsvCheckBounds
+    # Processes the CSV file for min & max values and distinct values for each column
     def get_min_max_values
       unless filename.nil?
         if File.exist?(filename)
+          # Using SmarterCSV gem to retrieve the csv records in chunks
+          # Chunk size can be set by the user
+          # E.g. :chunk_size => 200 would retrieve 200 rows each time
           SmarterCSV.process(filename, {:col_sep => delimiter, :chunk_size => chunk_size, 
           :remove_empty_values => false, :remove_zero_values => false}) do |chunk|
             chunk.each do |row|
@@ -58,9 +61,10 @@ module CsvImportAnalyzer
 
     private
 
-    ##
-    #If the key is of String type then we find the max length of it
-    ##
+    ###
+    # If the key is of String type then we find the max length of it
+    # Any other datatype would have a min and max ranges
+    ###
     def process_min_max_for_column(key, value)
       if min_max_bounds[key].nil?
         unless csv_column_datatypes[key] == :string
@@ -72,22 +76,30 @@ module CsvImportAnalyzer
       add_bounds(key, value)
     end
 
-    ##
-    #Method which decides on the min max values for each key and according to the passsed in value
-    ##
+    ###
+    # Method to decide on the min max values for each key
+    # Checks for length if key is of String format
+    # Check for values if key is of Numeric or Datetime format
+    ###
     def add_bounds(key, value)
-      if csv_column_datatypes[key] == :string
-        min_max_bounds[key][:min] = value.length if value.length < min_max_bounds[key][:min]
-        min_max_bounds[key][:max] = value.length if value.length > min_max_bounds[key][:max]
-      else
-        min_max_bounds[key][:min] = value if value < min_max_bounds[key][:min]
-        min_max_bounds[key][:max] = value if value > min_max_bounds[key][:max]
+      begin
+        if csv_column_datatypes[key] == :string
+          min_max_bounds[key][:min] = value.length if value.length < min_max_bounds[key][:min]
+          min_max_bounds[key][:max] = value.length if value.length > min_max_bounds[key][:max]
+        else
+          min_max_bounds[key][:min] = value if value < min_max_bounds[key][:min]
+          min_max_bounds[key][:max] = value if value > min_max_bounds[key][:max]
+        end
+      rescue ArgumentError, NoMethodError => e
+        ###
+        # TODO: Handle csv parse coversions of datatypes
+        ###
       end
     end
 
-    ##
-    #Processes the max number of distinct values set for each column
-    ##
+    ###
+    # Processes the max number of distinct values set for each column
+    ###
     def process_distinct_values(key, value)
       if distinct_values[key].nil?
         distinct_values[key] = [value]
