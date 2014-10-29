@@ -27,8 +27,12 @@ module CsvImportAnalyzer
       @options[:filename]
     end
 
-    
+    ###
     # Process a chunk of csv file for all possible datatypes towards each column in the row
+    # This datatype analysis is used for analyzing,
+    #                 Min - Max values of each column
+    #                 Distinct values of each column
+    #                 Enumeration eligibility
     def datatype_analysis
       SmarterCSV.process(filename, {:col_sep => delimiter, :chunk_size => chunk_size, 
         :remove_empty_values => false, :remove_zero_values => false}) do |chunk|
@@ -61,14 +65,18 @@ module CsvImportAnalyzer
       return options[:chunk]
     end
 
-    #Call DatatypeValidator in helper module to process the possible datatype for the value
-    #Is this the right way to hide dependency on the external classes or objects
-    #May be a static would do ? Should I create an object and call method on the object each time rather than instantiate a new object each time ??
+    ###
+    # Call DatatypeValidator in helper module to process the possible datatype for the value
+    # Is this the right way to hide dependency on the external classes or objects
+    # May be a static would do ? Should I create an object and call method on the object each time rather than instantiate a new object each time ??
+    ###
     def determine_dataype(value)
       return validate_field(value)
     end
 
+    ###
     # Build the hash of hashes which hold the count of different possible datatypes for each row
+    ###
     def add_to_datatype(key, datatype)
       if csv_column_datatypes[key].nil?
         csv_column_datatypes[key] = {datatype => 1}
@@ -81,8 +89,11 @@ module CsvImportAnalyzer
       end
     end
 
-    #Finalize the datatype for each column, A column datatype would be set to varchar or string if atleast of it's values tend to be string
-    #If the column doesn't have any possible strings then assign the datatype to column with maximum count of identified possibilites
+    ###
+    # Finalize the datatype for each column.
+    # A column datatype would be set to varchar or string if even one of it's values tend to be string
+    # If the column doesn't have any possible strings then assign the datatype to column with maximum count of identified possibilites
+    ###
     def finalize_datatypes_for_csv
       csv_column_datatypes.map { |column_name, possible_datatypes|
         #If there is string type even atleast 1 there is no other option but to set the datatype to string => varchar
@@ -95,7 +106,12 @@ module CsvImportAnalyzer
       }
     end
 
-    #Decide if simple datatype analysis is enough or proced further
+    ###
+    # Decide if simple datatype analysis is enough or proced further
+    # Proceed further would be to
+    #                 Identify min and max bounds for each column
+    #                 Identify if the number distinct values are less than set threshold
+    ###
     def take_further_actions
       if options[:check_bounds]
         min_max_bounds = CsvImportAnalyzer::CsvCheckBounds.new(options)

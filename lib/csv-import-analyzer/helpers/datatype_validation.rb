@@ -2,15 +2,15 @@ module CsvImportAnalyzer
   module DatatypeValidator
 
     def validate_field(content)
-      return get_datatype(content)
+      get_datatype(content)
     end
 
     private
+
     ###
-    # Date.parse("12/31/20145234", "%m/%d/%Y") => true which is not supposed to be true (although technically its true)
+    # Date.parse("12/31/20145234", "%m/%d/%Y") => true, which is not supposed to be true (although technically its true)
     # Validate year part has only 4 numbers in it
     ###
-
     def validate_year_date(field)
       date = nil
       formats = ["%d/%m/%Y","%d-%m-%Y","%d %m %Y","%m/%d/%Y","%m-%d-%Y","%m %d %Y"]
@@ -53,7 +53,8 @@ module CsvImportAnalyzer
     end
     
     ###
-    #To determine the data-type of an input field
+    # To determine the data-type of an input field
+    # Returns a field is either int, float, string, date, datetime type
     ###
     def get_datatype(field)
       #Remove if field has any comma's for int and float rep
