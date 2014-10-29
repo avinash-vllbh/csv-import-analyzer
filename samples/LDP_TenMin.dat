@@ -1,6 +1,6 @@
 "TOA5","CR1000","CR1000","2890","CR1000.Std.06","CPU:CNDep_LDP_MetTower.CR1","17015","TenMin"
 "TIMESTAMP","RECORD","AirTC_Avg","RH","SlrkW_Avg","SlrMJ_Tot","WS_ms_Avg","WindDir","Rain_mm_Tot"
-"TS","RN","Deg C","%","kW/m²","MJ/m²","meters/second","Degrees","mm"
+"TS","RN","Deg C","%","kW/m?","MJ/m?","meters/second","Degrees","mm"
 "","","Avg","Smp","Avg","Tot","Avg","Smp","Tot"
 "2008-11-12 12:20:00",0,20.05,25.3,0.67,0.3652017,1.549,338.3,0
 "2008-11-12 12:30:00",1,20.14,24.72,0.664,0.3981478,1.74,331.7,0
