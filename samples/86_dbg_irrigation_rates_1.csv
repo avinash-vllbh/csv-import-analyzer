@@ -1,0 +1,8 @@
+"id","taxa","emitters_plant","emitter_rate","time_hr_week","gal_plant","plants_taxa","gal_week_taxa","comment"
+1,"Nerium oleander",2,1.00000,4,9.00000,6,54.00000,""
+2,"Leucophyllum frutescens",2,1.00000,4,9.00000,6,54.00000,""
+3,"Encelia farinosa",2,1.00000,4,9.00000,1,9.00000,"two plants"
+4,"Encelia farinosa",1,1.00000,4,4.50000,1,4.50000,"one plant"
+5,"Atriplex canescens",2,1.00000,4,9.00000,1,9.00000,""
+6,"Quercus virginiana",3,1.00000,4,13.50000,1,13.50000,""
+7,"Eucalyptus microtheca",6,1.00000,4,27.00000,1,27.00000,""

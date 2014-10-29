@@ -1,0 +1,448 @@
+"photo_id","site_id","digital_file_name","date","path_to_photo","negative_no","notes","copies","author","credits","year"
+1,"01","0119497a","July,1949","/projectResults/GE5/Site01/0119497a.bmp","","PAN1/3","1","","contact William L. Graf about authorship",1949
+2,"01","0119497b","July,1949","/projectResults/GE5/Site01/0119497b.bmp","","PAN2/3","1","","contact William L. Graf about authorship",1949
+3,"01","0119497c","July,1949","/projectResults/GE5/Site01/0119497c.bmp","","PAN3/3","1","","contact William L. Graf about authorship",1949
+4,"01","01198001","Jan,1980","/projectResults/GE5/Site01/01198001.BMP","30/31+","","1","William L. Graf","",1980
+5,"01","0119801a","Jan,1980","/projectResults/GE5/Site01/0119801A.BMP","30/31-32","PAN1&2/4","1","William L. Graf","",1980
+6,"01","0119801b","Jan,1980","","30/33-34","PAN3&4/4","1","William L. Graf","",1980
+7,"01","01198004","April,1980","/projectResults/GE5/Site01/01198004.BMP","38/3-4;30-35","","1","William L. Graf","",1980
+8,"01","0119804a","April,1980","","38/4","PAN1/3","1","William L. Graf","",1980
+9,"01","0119804b","April,1980","/projectResults/GE5/Site01/0119804B.BMP","38/3","PAN2/3","1","William L. Graf","",1980
+10,"01","0119804c","April,1980","/projectResults/GE5/Site01/0119804C.BMP","30/35","PAN3/3","1","William L. Graf","",1980
+11,"01","01198010","Oct,1980","/projectResults/GE5/Site01/01198010.BMP","39/10+","","1","William L. Graf","",1980
+12,"01","0119800a","Oct,1980","/projectResults/GE5/Site01/0119800A.BMP","39/13","PAN1/4","1","William L. Graf","",1980
+13,"01","0119800b","Oct,1980","/projectResults/GE5/Site01/0119800B.BMP","39/12","PAN2/4","1","William L. Graf","",1980
+14,"01","0119800c","Oct,1980","/projectResults/GE5/Site01/0119800C.BMP","39/11","PAN3/4","1","William L. Graf","",1980
+15,"01","0119800d","Oct,1980","/projectResults/GE5/Site01/0119800D.BMP","39/10","PAN4/4","1","William L. Graf","",1980
+16,"01","01198611","Nov,1986","/projectResults/GE5/Site01/01198611.BMP","3/6","","1","William L. Graf","",1986
+17,"01","01199903","March,1999","/projectResults/GE5/Site01/01199903.BMP","11/12A","","1","William L. Graf","",1999
+18,"01","0119993a","March,1999","/projectResults/GE5/Site01/0119993A.BMP","11/13A","","1","William L. Graf","",1999
+19,"01","0119993b","March,1999","/projectResults/GE5/Site01/0119993B.BMP","11/14A","","1","William L. Graf","",1999
+20,"01","0119993c","March,1999","/projectResults/GE5/Site01/0119993C.BMP","11/15A","","1","William L. Graf","",1999
+21,"02","02194907","July,1949","/projectResults/GE5/Site02/02194907.BMP","33/18","","1","","contact William L. Graf about authorship",1949
+22,"02","02198001","Jan,1980","","30/1+","","1","William L. Graf","",1980
+23,"02","02199903","March,1999","/projectResults/GE5/Site02/02199903.BMP","11/11A","","1","William L. Graf","",1999
+24,"03","03192002","Feb,1920","/projectResults/GE5/Site03/03192002.BMP","","","1","","contact William L. Graf about authorship",1920
+25,"03","03193803","March,1938","/projectResults/GE5/Site03/03193803.BMP","","","1","","contact William L. Graf about authorship",1938
+26,"03","03194909","Sep,1949","/projectResults/GE5/Site03/03194909.BMP","","","1","","contact William L. Graf about authorship",1949
+27,"03","0319499a","Sep,1949","","33/19","","6","","contact William L. Graf about authorship",1949
+28,"03","03198101","Jan,1981","/projectResults/GE5/Site03/03198101.bmp","41/7-9","","1","William L. Graf","",1981
+29,"03","03198112","Dec,1981","/projectResults/GE5/Site03/03198112.BMP","","","1","William L. Graf","",1981
+30,"03","03198611","Nov,1986","/projectResults/GE5/Site03/03198611.BMP","","","2","William L. Graf","",1986
+31,"03","0319860a","Nov,1986","/projectResults/GE5/Site03/0319860A.BMP","","","1","William L. Graf","",1986
+32,"03","0319860b","Nov,1986","/projectResults/GE5/Site03/0319860B.BMP","","","1","William L. Graf","",1986
+33,"03","0319993a","March,1999","/projectResults/GE5/Site03/0319993a.bmp","11/0A","","1","William L. Graf","",1999
+34,"03","0319993b","March,1999","/projectResults/GE5/Site03/0319993B.BMP","11/1A","","1","William L. Graf","",1999
+35,"03","0319993c","March,1999","/projectResults/GE5/Site03/0319993C.BMP","11/2A","","1","William L. Graf","",1999
+36,"03","0319993d","March,1999","","11/3A","","1","William L. Graf","",1999
+37,"03","0319993e","March,1999","","11/4A","","1","William L. Graf","",1999
+38,"04","","Aug,1949","","33/23","","0","","contact William L. Graf about authorship",1949
+39,"04","","Jan,1980","","30/4A+","","0","William L. Graf","",1980
+40,"05","05194908","Aug,1949","/projectResults/GE5/Site05/05194908.BMP","33/24","","1","","contact William L. Graf about authorship",1949
+41,"05","05198001","Jan,1980","/projectResults/GE5/Site05/05198001.BMP","30/5A+","","1","William L. Graf","",1980
+42,"06","06000000","","","VARIOUS","","","","",
+43,"06","06194908","Aug,1949","/projectResults/GE5/Site06/06194908.BMP","33/25","","3","","contact William L. Graf about authorship",1949
+44,"06","06198001","Jan,1980","/projectResults/GE5/Site06/06198001.BMP","30/9A+","","3","William L. Graf","",1980
+45,"06","06198012","Dec,1980","/projectResults/GE5/Site06/06198012.BMP","40/3-5","","1","William L. Graf","",1980
+46,"07","07194908","Aug,1949","/projectResults/GE5/Site07/07194908.bmp","33/26","","1","","contact William L. Graf about authorship",1949
+47,"07","07198001","Jan,1980","/projectResults/GE5/Site07/07198001.BMP","30/18A+","","1","William L. Graf","",1980
+48,"07","0719801a","Jan,1980","/projectResults/GE5/Site07/0719801A.BMP","30/18A","PAN1/2","1","William L. Graf","",1980
+49,"07","0719801b","Jan,1980","/projectResults/GE5/Site07/0719801B.BMP","30/19A","PAN2/2","1","William L. Graf","",1980
+50,"07","07198012","Dec,1980","/projectResults/GE5/Site07/07198012.BMP","40/9-10","","1","William L. Graf","",1980
+51,"07","0719800a","Dec,1980","/projectResults/GE5/Site07/0719800a.bmp","40/10","PAN1/2","1","William L. Graf","",1980
+52,"07","0719800b","Dec,1980","/projectResults/GE5/Site07/0719800b.bmp","40/9","PAN2/2","1","William L. Graf","",1980
+53,"07","0719992a","Feb,1999","","9/9","PAN1/3","1","William L. Graf","",1999
+54,"07","0719992b","Feb,1999","/projectResults/GE5/Site07/0719992b.bmp","9/10","PAN2/3","1","William L. Graf","",1999
+55,"07","0719992c","Feb,1999","/projectResults/GE5/Site07/0719992c.bmp","9/11","PAN3/3","1","William L. Graf","",1999
+56,"08","08191506","June,1915","","33/32","","1","","contact William L. Graf about authorship",1915
+57,"08","08194908","Aug,1949","/projectResults/GE5/Site08/08194908.BMP","33/27","","1","","contact William L. Graf about authorship",1949
+58,"08","08198001","Jan,1980","","30/17A+","","1","William L. Graf","",1980
+59,"08","0819801a","Jan,1980","","30/17A","PAN1/2","1","William L. Graf","",1980
+60,"08","0819801b","Jan,1980","/projectResults/GE5/Site08/0819801B.BMP","30/16A","PAN2/2","1","William L. Graf","",1980
+61,"08","08198012","Dec,1980","/projectResults/GE5/Site08/08198012.BMP","40/12-13","","1","William L. Graf","",1980
+62,"08","0819800a","Dec,1980","","40/12","PAN1/2","1","William L. Graf","",1980
+63,"08","0819800b","Dec,1980","/projectResults/GE5/Site08/0819800B.BMP","40/13","PAN2/2","1","William L. Graf","",1980
+64,"08","0819992a","Feb,1999","/projectResults/GE5/Site08/0819992a.bmp","9/12","PAN1/4","1","William L. Graf","",1999
+65,"08","0819992b","Feb,1999","/projectResults/GE5/Site08/0819992b.bmp","9/13","PAN2/4","1","William L. Graf","",1999
+66,"08","0819992c","Feb,1999","/projectResults/GE5/Site08/0819992c.bmp","9/14","PAN3/4","1","William L. Graf","",1999
+67,"08","0819992d","Feb,1999","/projectResults/GE5/Site08/0819992d.bmp","9/15","PAN4/4","1","William L. Graf","",1999
+68,"09","09194908","Aug,1949","","33/29","","1","","contact William L. Graf about authorship",1949
+69,"09","","Jan,1989","","30/20A+","","0","William L. Graf","",1989
+70,"09","09198002","Feb,1980","/projectResults/GE5/Site09/09198002.BMP","34/34","","1","William L. Graf","",1980
+71,"09","09199903","March,1999","/projectResults/GE5/Site09/09199903.bmp","1/2","","1","William L. Graf","",1999
+72,"09","0919993a","March,1999","","1/3","","1","William L. Graf","",1999
+73,"10","10191707","July,1917","/projectResults/GE5/Site10/10191707.BMP","33/31","","1","","contact William L. Graf about authorship",1917
+74,"10","10198001","Jan,1980","/projectResults/GE5/Site10/10198001.BMP","30/25A","","1","William L. Graf","",1980
+75,"10","","Feb,1980","","34/26","180000","0","William L. Graf","",1980
+76,"10","10199903","March,1999","/projectResults/GE5/Site10/10199903.bmp","1/4","","1","William L. Graf","",1999
+77,"10","1019993a","March,1999","","1/5","","1","William L. Graf","",1999
+78,"10","1019993b","March,1999","/projectResults/GE5/Site10/1019993b.bmp","1/6","","1","William L. Graf","",1999
+79,"10","1019993c","March,1999","/projectResults/GE5/Site10/1019993c.bmp","1/7","","1","William L. Graf","",1999
+80,"11","11194907","July,1949","/projectResults/GE5/Site11/11194907.BMP","33/30","","1","","contact William L. Graf about authorship",1949
+81,"11","11198001","Jan,1980","/projectResults/GE5/Site11/11198001.BMP","30/23A+","","1","William L. Graf","",1980
+82,"11","1119801a","Jan,1980","/projectResults/GE5/Site11/1119801a.bmp","30/","PAN1/3","1","William L. Graf","",1980
+83,"11","1119801b","Jan,1980","/projectResults/GE5/Site11/1119801B.BMP","30/23A","PAN2/3","1","William L. Graf","",1980
+84,"11","1119801c","Jan,1980","/projectResults/GE5/Site11/1119801C.BMP","30/24A","PAN3/3","1","William L. Graf","",1980
+85,"11","11198002","Feb,1980","","34/28+","","1","William L. Graf","",1980
+86,"11","1119802a","Feb,1980","","34/28","PAN1/2","1","William L. Graf","",1980
+87,"11","1119802b","Feb,1980","/projectResults/GE5/Site11/1119802B.BMP","34/29","PAN2/2","1","William L. Graf","",1980
+88,"11","1119993a","March,1999","/projectResults/GE5/Site11/1119993a.bmp","1/9","PAN1/3","1","William L. Graf","",1999
+89,"11","1119993b","March,1999","/projectResults/GE5/Site11/1119993b.bmp","1/11","PAN2/3","1","William L. Graf","",1999
+90,"11","1119993c","March,1999","/projectResults/GE5/Site11/1119993c.bmp","1/13","PAN3/3","1","William L. Graf","",1999
+91,"12","12194103","March,1941","/projectResults/GE5/Site12/12194103.BMP","33/33","","1","","contact William L. Graf about authorship",1941
+92,"12","12198001","Jan,1980","/projectResults/GE5/Site12/12198001.BMP","30/28+","","1","William L. Graf","",1980
+93,"12","1219801a","Jan,1980","/projectResults/GE5/Site12/1219801A.BMP","30/29A","PAN1/2","1","William L. Graf","",1980
+94,"12","1219801b","Jan,1980","","30/28","PAN2/2","1","William L. Graf","",1980
+95,"12","","Feb,1980","","34/34","180000","0","William L. Graf","",1980
+96,"12","12199902","Feb,1980","/projectResults/GE5/Site12/12199902.bmp","2/5A","","1","William L. Graf","",1980
+97,"12","1219992a","Feb,1999","/projectResults/GE5/Site12/1219992a.bmp","2/19A","","1","William L. Graf","",1999
+98,"13","13194907","July,1949","","32/30","","3","","contact William L. Graf about authorship",1949
+99,"13","1319497a","July,1949","","32/30","PAN1/2","1","","contact William L. Graf about authorship",1949
+100,"13","1319497b","July,1949","/projectResults/GE5/Site13/1319497b.bmp","32/30","PAN2/2","1","","contact William L. Graf about authorship",1949
+101,"13","13198001","Jan,1980","/projectResults/GE5/Site13/13198001.BMP","33/7+","","1","William L. Graf","",1980
+102,"13","13198002","Feb,1980","/projectResults/GE5/Site13/13198002.BMP","33/10+","15000","1","William L. Graf","",1980
+103,"13","1319802a","Feb,1980","/projectResults/GE5/Site13/1319802A.BMP","35/3","120000","1","William L. Graf","",1980
+104,"13","13198010","Oct,1980","/projectResults/GE5/Site13/13198010.BMP","39/20+","","1","William L. Graf","",1980
+105,"13","13199902","Feb,1999","","4/5","","1","William L. Graf","",1999
+106,"13","1319992a","Feb,1999","/projectResults/GE5/Site13/1319992a.bmp","4/6","","1","William L. Graf","",1999
+107,"14","14194907","July,1949","/projectResults/GE5/Site14/14194907.bmp","32/27+, 42/7","","2","","contact William L. Graf about authorship",1949
+108,"14","1419801a","Jan,1980","/projectResults/GE5/Site14/1419801a.bmp","33/4","PAN1/3","1","William L. Graf","",1980
+109,"14","1419801b","Jan,1980","/projectResults/GE5/Site14/1419801b.bmp","33/5","PAN2/3","1","William L. Graf","",1980
+110,"14","1419801c","Jan,1980","/projectResults/GE5/Site14/1419801c.bmp","33/6","PAN3/3","1","William L. Graf","",1980
+111,"14","14198002","Feb,1980","/projectResults/GE5/Site14/14198002.BMP","33/12+, 35/15+","","2","William L. Graf","",1980
+112,"14","1419802a","Feb,1980","/projectResults/GE5/Site14/1419802A.BMP","35/17+, 33/12","PAN1/2","3","William L. Graf","",1980
+113,"14","1419802b","Feb,1980","/projectResults/GE5/Site14/1419802b.bmp","35/15+, 33/13+","PAN2/2","3","William L. Graf","",1980
+114,"14","1419800a","Oct,1980","","41/16","PAN1/2","1","William L. Graf","",1980
+115,"14","1419800b","Oct,1980","/projectResults/GE5/Site14/1419800b.bmp","41/17","PAN2/2","2","William L. Graf","",1980
+116,"15","15194907","July,1949","/projectResults/GE5/Site15/15194907.BMP","32/34","","1","","contact William L. Graf about authorship",1949
+117,"15","15198002","Feb,1980","/projectResults/GE5/Site15/15198002.BMP","35/12+","","1","William L. Graf","",1980
+118,"15","1519802a","Feb,1980","/projectResults/GE5/Site15/1519802A.BMP","35","PAN1/3","1","William L. Graf","",1980
+119,"15","1519802b","Feb,1980","/projectResults/GE5/Site15/1519802B.BMP","35/13","PAN2/3","1","William L. Graf","",1980
+120,"15","1519802c","Feb,1980","/projectResults/GE5/Site15/1519802C.BMP","35/12","PAN3/3","1","William L. Graf","",1980
+121,"15","15199902","Feb,1999","/projectResults/GE5/Site15/15199902.bmp","4/7","","1","William L. Graf","",1999
+122,"15","1519992a","Feb,1999","/projectResults/GE5/Site15/1519992a.bmp","4/8","","1","William L. Graf","",1999
+123,"15","1519992b","Feb,1999","/projectResults/GE5/Site15/1519992b.bmp","4/9","","1","William L. Graf","",1999
+124,"16","16194907","July,1949","/projectResults/GE5/Site16/16194907.BMP","33/34","","2","","contact William L. Graf about authorship",1949
+125,"16","16198001","Jan,1980","/projectResults/GE5/Site16/16198001.BMP","33/2+","","2","William L. Graf","",1980
+126,"16","16199904","April,1999","/projectResults/GE5/Site16/16199904.BMP","13/5","","1","William L. Graf","",1999
+127,"16","1619994a","April,1999","/projectResults/GE5/Site16/1619994A.BMP","13/6","","1","William L. Graf","",1999
+128,"16","1619994b","April,1999","/projectResults/GE5/Site16/1619994B.BMP","13/7","","1","William L. Graf","",1999
+129,"17","17194907","July,1949","/projectResults/GE5/Site17/17194907.BMP","33/35","","2","","contact William L. Graf about authorship",1949
+130,"17","17198001","Jan,1980","/projectResults/GE5/Site17/17198001.BMP","31/36","","1","William L. Graf","",1980
+131,"17","17198002","Feb,1980","/projectResults/GE5/Site17/17198002.BMP","","","1","William L. Graf","",1980
+132,"17","17199903","March,1999","","7/8","","1","William L. Graf","",1999
+133,"18","18194907","July,1949","/projectResults/GE5/Site18/18194907.BMP","33/36","","3","","",1949
+134,"18","18198001","Jan,1980","/projectResults/GE5/Site18/18198001.BMP","31/35A","","2","William L. Graf","",1980
+135,"18","","April,1980","","38/8","","0","William L. Graf","",1980
+136,"18","18199903","March,1999","/projectResults/GE5/Site18/18199903.BMP","7/7","","1","William L. Graf","",1999
+137,"19","19194907","July,1949","/projectResults/GE5/Site19/19194907.BMP","32/3","","2","","contact William L. Graf about authorship",1949
+138,"19","1919497a","July,1949","/projectResults/GE5/Site19/1919497A.BMP","38/13","","1","","contact William L. Graf about authorship",1949
+139,"19","1919497b","July,1949","/projectResults/GE5/Site19/1919497B.BMP","32/2","","2","","contact William L. Graf about authorship",1949
+140,"19","1919497c","July,1949","/projectResults/GE5/Site19/1919497C.BMP","32/4, 38/26","","3","","contact William L. Graf about authorship",1949
+141,"19","1919497d","July,1949","/projectResults/GE5/Site19/1919497D.BMP","33/37","","2","","contact William L. Graf about authorship",1949
+142,"19","1919497e","July,1949","/projectResults/GE5/Site19/1919497E.BMP","38/23+","","3","","contact William L. Graf about authorship",1949
+143,"19","19198001","Jan,1980","/projectResults/GE5/Site19/19198001.BMP","31/32","","1","William L. Graf","",1980
+144,"19","1919801a","Jan,1980","/projectResults/GE5/Site19/1919801A.BMP","31/35","","1","William L. Graf","",1980
+145,"19","1919801b","Jan,1980","/projectResults/GE5/Site19/1919801B.BMP","31/33+","","2","William L. Graf","",1980
+146,"19","19198002","Feb,1980","/projectResults/GE5/Site19/19198002.BMP","35/37","","2","William L. Graf","",1980
+147,"19","19198005","May,1980","/projectResults/GE5/Site19/19198005.BMP","38/11+","","2","William L. Graf","",1980
+148,"19","1919993a","March,1999","/projectResults/GE5/Site19/1919993A.BMP","7/1","","1","William L. Graf","",1999
+149,"19","1919993b","March,1999","/projectResults/GE5/Site19/1919993B.BMP","7/2","","1","William L. Graf","",1999
+150,"19","1919993c","March,1999","/projectResults/GE5/Site19/1919993C.BMP","7/3","","1","William L. Graf","",1999
+151,"19","1919993d","March,1999","/projectResults/GE5/Site19/1919993D.BMP","7/4","","1","William L. Graf","",1999
+152,"19","1919993e","March,1999","/projectResults/GE5/Site19/1919993E.BMP","7/5","","1","William L. Graf","",1999
+153,"20","20189500","1895","","","","1","","contact William L. Graf about authorship",1895
+154,"20","20189600","1896","/projectResults/GE5/Site20/20189600.BMP","","","1","","contact William L. Graf about authorship",1896
+155,"20","20192100","1921","/projectResults/GE5/Site20/20192100.BMP","","","1","","contact William L. Graf about authorship",1921
+156,"20","","March,1938","","32/7","","0","","contact William L. Graf about authorship",1938
+157,"20","20194907","July,1949","/projectResults/GE5/Site20/20194907.BMP","32/14, 44","","3","","contact William L. Graf about authorship",1949
+158,"20","","Jan,1980","","31/31+","","0","William L. Graf","",1980
+159,"20","20198001","Jan,1980","/projectResults/GE5/Site20/20198001.BMP","31/25","","1","William L. Graf","",1980
+160,"20","2019801a","Jan,1980","/projectResults/GE5/Site20/2019801A.BMP","31/8+","","1","William L. Graf","",1980
+161,"20","20198002","Feb,1980","/projectResults/GE5/Site20/20198002.BMP","35/31","","1","William L. Graf","",1980
+162,"20","20198004","April,1980","/projectResults/GE5/Site20/20198004.BMP","38/17+","","2","William L. Graf","",1980
+163,"20","20199903","March,1999","/projectResults/GE5/Site20/20199903.BMP","12/7","","1","William L. Graf","",1999
+164,"20","2019993a","March,1999","/projectResults/GE5/Site20/2019993A.BMP","12/8","","1","William L. Graf","",1999
+165,"21","","Jan,1980","","31/25","","0","William L. Graf","",1980
+166,"22","22193803","March,1938","/projectResults/GE5/Site22/22193803.bmp","32/6","","2","","contact William L. Graf about authorship",1938
+167,"22","22198001","Jan,1980","/projectResults/GE5/Site22/22198001.BMP","31","","1","William L. Graf","",1980
+168,"22","2219801a","Jan,1980","/projectResults/GE5/Site22/2219801A.BMP","31/26","","1","William L. Graf","",1980
+169,"22","22199903","March,1999","/projectResults/GE5/Site22/22199903.BMP","8/1","","1","William L. Graf","",1999
+170,"22","2219993a","March,1999","/projectResults/GE5/Site22/2219993A.BMP","8/2","","1","William L. Graf","",1999
+171,"22","2219993b","March,1999","/projectResults/GE5/Site22/2219993B.BMP","8/3","","1","William L. Graf","",1999
+172,"22","2219993c","March,1999","/projectResults/GE5/Site22/2219993C.BMP","8/4","","1","William L. Graf","",1999
+173,"22","2219993d","March,1999","/projectResults/GE5/Site22/2219993d.bmp","12/1","","1","William L. Graf","",1999
+174,"22","2219993e","March,1999","","12/2","","1","William L. Graf","",1999
+175,"22","2219993f","March,1999","/projectResults/GE5/Site22/2219993f.bmp","12/3","","1","William L. Graf","",1999
+176,"22","2219993g","March,1999","","12/4","","1","William L. Graf","",1999
+177,"23","23194907","July,1949","/projectResults/GE5/Site23/23194907.bmp","32/18","","2","","contact William L. Graf about authorship",1949
+178,"23","2319497a","July,1949","/projectResults/GE5/Site23/2319497a.bmp","32/19+","","2","","contact William L. Graf about authorship",1949
+179,"23","23198001","Jan,1980","","31/3","","1","William L. Graf","",1980
+180,"23","2319801a","Jan,1980","/projectResults/GE5/Site23/2319801A.BMP","31/2","","1","William L. Graf","",1980
+181,"24","","July,1949","","32/19+","","0","","contact William L. Graf about authorship",1949
+182,"24","","Jan,1980","","31/4+","","0","William L. Graf","",1980
+183,"24","","Feb,1980","","35/31+","13000","0","William L. Graf","",1980
+184,"25","25194900","July,1949","","44","","1","","contact William L. Graf about authorship",1949
+185,"25","2519497a","July,1949","/projectResults/GE5/Site25/2519497a.bmp","32/8+","","2","","contact William L. Graf about authorship",1949
+186,"25","2519497b","July,1949","/projectResults/GE5/Site25/2519497B.BMP","32/10+","","2","","contact William L. Graf about authorship",1949
+187,"25","2519801a","Jan,1980","/projectResults/GE5/Site25/2519801A.BMP","31/23+","","1","William L. Graf","",1980
+188,"25","2519801b","Jan,1980","/projectResults/GE5/Site25/2519801B.BMP","31/22","","1","William L. Graf","",1980
+189,"25","2519801c","Jan,1980","/projectResults/GE5/Site25/2519801C.BMP","31/21","","1","William L. Graf","",1980
+190,"25","2519801d","Jan,1980","/projectResults/GE5/Site25/2519801D.BMP","31/19+","","1","William L. Graf","",1980
+191,"25","25198002","Feb,1980","/projectResults/GE5/Site25/25198002.BMP","35/30","","1","William L. Graf","",1980
+192,"25","2519802b","Feb,1980","/projectResults/GE5/Site25/2519802B.BMP","35/17+","","1","William L. Graf","",1980
+193,"25","25199903","March,1999","/projectResults/GE5/Site25/25199903.bmp","8/19","","1","William L. Graf","",1999
+194,"25","2519993a","March,1999","","8/20","","1","William L. Graf","",1999
+195,"25","2519993b","March,1999","","8/21","","1","William L. Graf","",1999
+196,"25","2519993c","March,1999","/projectResults/GE5/Site25/2519993c.bmp","8/22","","1","William L. Graf","",1999
+197,"26","26192303","March, 1923","/projectResults/GE5/Site26/26192303.BMP","32/13;41/18+","","6","","contact William L. Graf about authorship",1923
+198,"26","26194907","July,1949","","44","","1","","contact William L. Graf about authorship",1949
+199,"26","2619490a","July,1949","/projectResults/GE5/Site26/2619497a.bmp","44;32/12","","2","","contact William L. Graf about authorship",1949
+200,"26","26198001","Jan,1980","/projectResults/GE5/Site26/26198001.BMP","31/9+","","4","William L. Graf","",1980
+201,"26","2619801a","Jan,1980","/projectResults/GE5/Site26/2619801a.bmp","31/17","","2","William L. Graf","",1980
+202,"26","26198002","Feb,1980","/projectResults/GE5/Site26/26198002.BMP","35/24+","","2","William L. Graf","",1980
+203,"26","26198707","July,1987","/projectResults/GE5/Site26/26198707.BMP","","","1","William L. Graf","",1987
+204,"26","2619993a","March,1999","/projectResults/GE5/Site26/2619993a.bmp","8/13","","1","William L. Graf","",1999
+205,"26","2619993b","March,1999","/projectResults/GE5/Site26/2619993b.bmp","8/14","","1","William L. Graf","",1999
+206,"26","2619993c","March,1999","/projectResults/GE5/Site26/2619993c.bmp","8/15","","1","William L. Graf","",1999
+207,"26","2619993d","March,1999","/projectResults/GE5/Site26/2619993d.bmp","8/16","","1","William L. Graf","",1999
+208,"26","2619993e","March,1999","","8/17","","1","William L. Graf","",1999
+209,"26","2619993f","March,1999","/projectResults/GE5/Site26/2619993f.bmp","8/18","","1","William L. Graf","",1999
+210,"27","27194907","July,1949","/projectResults/GE5/Site27/27194907.bmp","44","","2","","contact William L. Graf about authorship",1949
+211,"27","2719497a","July,1949","/projectResults/GE5/Site27/2719497a.bmp","32/21","","1","","contact William L. Graf about authorship",1949
+212,"27","27198006","June,1980","/projectResults/GE5/Site27/27198006.bmp","40/11","","1","William L. Graf","",1980
+213,"27","27198012","Dec,1980","/projectResults/GE5/Site27/27198012.BMP","","","0","William L. Graf","",1980
+214,"28","28194109","Aug,1941","/projectResults/GE5/Site28/28194109.bmp","32/22","","1","","contact William L. Graf about authorship",1941
+215,"28","28194907","July,1949","/projectResults/GE5/Site28/28194907.bmp","","","1","","contact William L. Graf about authorship",1949
+216,"28","28198010","Oct,1980","/projectResults/GE5/Site28/28198010.BMP","40/19","","1","William L. Graf","",1980
+217,"28","28199803","March,1998","/projectResults/GE5/Site28/28199803.bmp","144/1+","","2","William L. Graf","",1998
+218,"29","29194909","Sep,1949","/projectResults/GE5/Site29/29194909.BMP","43/9","","2","","contact William L. Graf about authorship",1949
+219,"29","29198010","Oct,1980","/projectResults/GE5/Site29/29198010.BMP","","","1","William L. Graf","",1980
+220,"29","","Dec,1980","","40/12+","","0","William L. Graf","",1980
+221,"30","30194907","July,1949","/projectResults/GE5/Site30/30194907.BMP","32/24+","","2","","contact William L. Graf about authorship",1949
+222,"30","3019497a","July,1949","","32/24","","1","","contact William L. Graf about authorship",1949
+223,"30","3019497b","July,1949","","32/25","","1","","contact William L. Graf about authorship",1949
+224,"30","3019497c","July,1949","/projectResults/GE5/Site30/3019497C.BMP","32/26","","1","","contact William L. Graf about authorship",1949
+225,"30","30198010","Oct,1980","/projectResults/GE5/Site30/30198010.BMP","39/6","","1","William L. Graf","",1980
+226,"30","30199902","Feb,1999","","4/12","","1","William L. Graf","",1999
+227,"31","31194907","July,1949","/projectResults/GE5/Site31/31194907.BMP","32/29","","2","","contact William L. Graf about authorship",1949
+228,"31","31198010","Oct,1980","","40/20","","1","William L. Graf","",1980
+229,"31","31199902","Feb,1999","","4/10","","1","William L. Graf","",1999
+230,"32","32194907","July,1949","","32/33","","2","","contact William L. Graf about authorship",1949
+231,"32","32198012","Dec,1980","/projectResults/GE5/Site32/32198012.BMP","40/21","","1","William L. Graf","",1980
+232,"32","32199902","Feb,1999","/projectResults/GE5/Site32/32199902.bmp","4/1","","1","William L. Graf","",1999
+233,"32","3219992a","Feb,1999","","4/2","","1","William L. Graf","",1999
+234,"33","33194907","July,1949","/projectResults/GE5/Site33/33194907.BMP","41/20;32/35+","","3","","contact William L. Graf about authorship",1949
+235,"33","3319497a","July,1949","/projectResults/GE5/Site33/3319497a.bmp","41/20;34/2","","3","","contact William L. Graf about authorship",1949
+236,"33","33198002","Feb,1980","","35/10","","1","William L. Graf","",1980
+237,"33","3319802a","Feb,1980","/projectResults/GE5/Site33/3319802A.BMP","35/11","","1","William L. Graf","",1980
+238,"33","33199902","Feb,1999","/projectResults/GE5/Site33/33199902.bmp","4/3","","1","William L. Graf","",1999
+239,"33","3319992a","Feb,1999","/projectResults/GE5/Site33/3319992a.bmp","4/4","","1","William L. Graf","",1999
+240,"34","34194907","July,1949","/projectResults/GE5/Site34/34194907.BMP","44","","2+","","contact William L. Graf about authorship",1949
+241,"34","3419497a","July,1949","/projectResults/GE5/Site34/3419497a.bmp","44","PAN1/6","2+","","contact William L. Graf about authorship",1949
+242,"34","3419497b","July,1949","/projectResults/GE5/Site34/3419497b.bmp","44","PAN2/6","2+","","contact William L. Graf about authorship",1949
+243,"34","3419497c","July,1949","","44","PAN3/6","2+","","contact William L. Graf about authorship",1949
+244,"34","3419497d","July,1949","/projectResults/GE5/Site34/3419497d.bmp","44","PAN4/6","2+","","contact William L. Graf about authorship",1949
+245,"34","3419497e","July,1949","/projectResults/GE5/Site34/3419497e.bmp","44","PAN5/6","2+","","contact William L. Graf about authorship",1949
+246,"34","3419497f","July,1949","/projectResults/GE5/Site34/3419497f.bmp","44","PAN6/6","2+","","contact William L. Graf about authorship",1949
+247,"34","34198101","Jan,1981","/projectResults/GE5/Site34/34198101.BMP","31/11+","","2","William L. Graf","",1981
+248,"34","3419811a","Jan,1981","/projectResults/GE5/Site34/3419811A.BMP","41/13+","","2","William L. Graf","",1981
+249,"34","34198104","April,1981","/projectResults/GE5/Site34/34198104.bmp","42","","1","William L. Graf","",1981
+250,"34","3419814a","April,1981","/projectResults/GE5/Site34/3419814a.bmp","42","","1","William L. Graf","",1981
+251,"34","34199903","April,1999","/projectResults/GE5/Site34/34199903.BMP","12/24A","","1","William L. Graf","",1999
+252,"34","34199904","April,1999","/projectResults/GE5/Site34/34199904.BMP","11/20A","","1","William L. Graf","",1999
+253,"34","3419993a","April,1999","","11/21A","","1","William L. Graf","",1999
+254,"34","3419993b","April,1999","/projectResults/GE5/Site34/3419993B.BMP","11/22A","","1","William L. Graf","",1999
+255,"34","3419993c","April,1999","/projectResults/GE5/Site34/3419993C.BMP","11/23A","","1","William L. Graf","",1999
+256,"34","3419994a","April,1999","/projectResults/GE5/Site34/3419994A.BMP","11B/8","","1","William L. Graf","",1999
+257,"34","3419994b","April,1999","","11B/7","","1","William L. Graf","",1999
+258,"34","3419994c","April,1999","/projectResults/GE5/Site34/3419994c.bmp","11B/9","","1","William L. Graf","",1999
+259,"35","35198001","Jan,1980","/projectResults/GE5/Site35/35198001.BMP","30/13A+","","1","William L. Graf","",1980
+260,"35","3519801a","Jan,1980","/projectResults/GE5/Site35/3519801A.BMP","30/15A","PAN1/3","1","William L. Graf","",1980
+261,"35","3519801b","Jan,1980","/projectResults/GE5/Site35/3519801B.BMP","30/14A","PAN2/3","1","William L. Graf","",1980
+262,"35","3519801c","Jan,1980","","30/13A","PAN3/3","1","William L. Graf","",1980
+263,"35","35198012","Dec,1980","/projectResults/GE5/Site35/35198012.BMP","40/7","PAN1/3","1","William L. Graf","",1980
+264,"35","3519800a","Dec,1980","/projectResults/GE5/Site35/3519800a.bmp","40/6","PAN2/3","1","William L. Graf","",1980
+265,"35","3519800b","Dec,1980","/projectResults/GE5/Site35/3519800b.bmp","40/8","PAN3/3","1","William L. Graf","",1980
+266,"35","35199902","Feb,1999","/projectResults/GE5/Site35/35199902.BMP","9/2","","1","William L. Graf","",1999
+267,"35","3519992a","Feb,1999","/projectResults/GE5/Site35/3519992A.BMP","9/3","","1","William L. Graf","",1999
+268,"35","3519992b","Feb,1999","/projectResults/GE5/Site35/3519992B.BMP","9/4","","1","William L. Graf","",1999
+269,"35","3519992c","Feb,1999","/projectResults/GE5/Site35/3519992C.BMP","9/5","","1","William L. Graf","",1999
+270,"35","3519992d","Feb,1999","/projectResults/GE5/Site35/3519992D.BMP","9/6","","1","William L. Graf","",1999
+271,"35","3519992e","Feb,1999","/projectResults/GE5/Site35/3519992E.BMP","9/7","","1","William L. Graf","",1999
+272,"35","3519992f","Feb,1999","/projectResults/GE5/Site35/3519992F.BMP","9/8","","1","William L. Graf","",1999
+273,"36","36198001","Jan,1980","/projectResults/GE5/Site36/36198001.BMP","30/18","","1","William L. Graf","",1980
+274,"36","36198002","Feb,1980","/projectResults/GE5/Site36/36198002.BMP","33/17","","1","William L. Graf","",1980
+275,"36","3619802a","Feb,1980","/projectResults/GE5/Site36/3619802A.BMP","34/20","","1","William L. Graf","",1980
+276,"36","36198004","April,1980","","38/6","","1","William L. Graf","",1980
+277,"36","36198010","Oct,1980","/projectResults/GE5/Site36/36198010.BMP","40/2","","1","William L. Graf","",1980
+278,"36","36198012","Dec,1980","/projectResults/GE5/Site36/36198012.bmp","36/14+","","1","William L. Graf","",1980
+279,"36","36198200","1982","","50/4","","1","William L. Graf","",1982
+280,"36","36198310","Oct,1983","/projectResults/GE5/Site36/36198310.BMP","42/0","","1","William L. Graf","",1983
+281,"36","36198312","Dec,1983","/projectResults/GE5/Site36/36198312.BMP","45/0","","1","William L. Graf","",1983
+282,"36","36199300","1993","/projectResults/GE5/Site36/36199300.BMP","109/4","","1","William L. Graf","",1993
+283,"38","38194108","Aug,1941","/projectResults/GE5/Site38/38194108.BMP","33/28","","1","","contact William L. Graf about authorship",1941
+284,"38","38198001","Jan,1980","/projectResults/GE5/Site38/38198001.BMP","30/25A","","1","William L. Graf","",1980
+285,"38","3819801a","Jan,1980","","30/25A","PAN1/2","1","William L. Graf","",1980
+286,"38","3819801b","Jan,1980","/projectResults/GE5/Site38/3819801B.BMP","30/26A","PAN2/2","1","William L. Graf","",1980
+287,"38","3819801c","Jan,1980","/projectResults/GE5/Site38/3819801C.BMP","30/26","","1","William L. Graf","",1980
+288,"38","3819801d","Jan,1980","/projectResults/GE5/Site38/3819801D.BMP","30/26","PAN1/2","1","William L. Graf","",1980
+289,"38","3819801e","Jan,1980","/projectResults/GE5/Site38/3819801E.BMP","30/26","PAN2/2","1","William L. Graf","",1980
+290,"38","38198002","Feb,1980","/projectResults/GE5/Site38/38198002.BMP","34/21","","1","William L. Graf","",1980
+291,"38","38199903","March,1999","/projectResults/GE5/Site38/38199903.BMP","9/18","","1","William L. Graf","",1999
+292,"39","","July,1949","","34/2;42/20","","0","","contact William L. Graf about authorship",1949
+293,"39","","Feb,1980","","35/11+","","0","William L. Graf","",1980
+294,"40","40194907","July,1949","/projectResults/GE5/Site40/40194907.BMP","34/3","","2","","contact William L. Graf about authorship",1949
+295,"40","40198012","Dec,1980","/projectResults/GE5/Site40/40198012.BMP","40/22","","1","William L. Graf","",1980
+296,"41","41194907","July,1949","/projectResults/GE5/Site41/41194907.BMP","34/4","","1","","contact William L. Graf about authorship",1949
+297,"41","41198012","Dec,1980","/projectResults/GE5/Site41/41198012.BMP","40/24","","1","William L. Graf","",1980
+298,"42","42194907","July,1949","/projectResults/GE5/Site42/42194907.BMP","34/5","","2","","contact William L. Graf about authorship",1949
+299,"42","42198012","Dec,1980","/projectResults/GE5/Site42/42198012.BMP","40/23","","1","William L. Graf","",1980
+300,"43","43194100","1941","/projectResults/GE5/Site43/43194100.BMP","","","1","","contact William L. Graf about authorship",1941
+301,"43","43194907","July,1949","","34/6","","2","","contact William L. Graf about authorship",1949
+302,"43","43198012","Dec,1980","/projectResults/GE5/Site43/43198012.BMP","40/29","","1","William L. Graf","",1980
+303,"43","43199301","Jan,1993","/projectResults/GE5/Site43/43199301.bmp","116/3","","1","William L. Graf","",1993
+304,"43","43199902","Feb,1999","","5/2","","1","William L. Graf","",1999
+305,"43","4319992a","Feb,1999","/projectResults/GE5/Site43/4319992a.bmp","5/3","","1","William L. Graf","",1999
+306,"43","4319992b","Feb,1999","/projectResults/GE5/Site43/4319992b.bmp","5/4","","1","William L. Graf","",1999
+307,"44","44194108","Aug,1941","","34/7","","2","","contact William L. Graf about authorship",1941
+308,"44","44198012","Dec,1980","/projectResults/GE5/Site44/44198012.BMP","40/30","","1","William L. Graf","",1980
+309,"44","44199902","Feb,1999","/projectResults/GE5/Site44/44199902.bmp","5/5","","1","William L. Graf","",1999
+310,"44","4419992a","Feb,1999","/projectResults/GE5/Site44/4419992a.bmp","5/6","","1","William L. Graf","",1999
+311,"44","4419992b","Feb,1999","/projectResults/GE5/Site44/4419992b.bmp","5/7","","1","William L. Graf","",1999
+312,"45","45194907","July,1949","/projectResults/GE5/Site45/45194907.BMP","34/8","","2","","contact William L. Graf about authorship",1949
+313,"45","45198012","Dec,1980","","40/33","","1","William L. Graf","",1980
+314,"45","45199903","March,1999","/projectResults/GE5/Site45/45199903.BMP","7/14","","1","William L. Graf","",1999
+315,"45","4519993a","March,1999","","7/15","","1","William L. Graf","",1999
+316,"45","4519993b","March,1999","/projectResults/GE5/Site45/4519993B.BMP","7/16","","1","William L. Graf","",1999
+317,"45","4519993c","March,1999","/projectResults/GE5/Site45/4519993C.BMP","7/17","","1","William L. Graf","",1999
+318,"45","4519993d","March,1999","","7/18","","1","William L. Graf","",1999
+319,"45","4519993e","March,1999","/projectResults/GE5/Site45/4519993E.BMP","7/19","","1","William L. Graf","",1999
+320,"46","","Aug,1949","","34/9,10","","0","","contact William L. Graf about authorship",1949
+321,"46","","Dec,1980","","40/35+","","0","William L. Graf","",1980
+322,"47","47194108","Aug,1941","/projectResults/GE5/Site47/47194108.bmp","34/11","","1","","contact William L. Graf about authorship",1941
+323,"47","47194908","Aug,1949","/projectResults/GE5/Site47/47194908.bmp","34/12+","","2","","contact William L. Graf about authorship",1949
+324,"47","47198101","Jan,1981","/projectResults/GE5/Site47/47198101.BMP","41/9","","1","William L. Graf","",1981
+325,"47","47199903","March,1999","/projectResults/GE5/Site47/47199903.BMP","7/9","","1","William L. Graf","",1999
+326,"47","4719993a","March,1999","/projectResults/GE5/Site47/4719993A.BMP","7/10","","1","William L. Graf","",1999
+327,"47","4719993b","March,1999","/projectResults/GE5/Site47/4719993B.BMP","7/13","","1","William L. Graf","",1999
+328,"48","48194907","July,1949","","","","1","","contact William L. Graf about authorship",1949
+329,"48","","Jan,1981","","41/2","","0","William L. Graf","",1981
+330,"48","48199903","March,1999","/projectResults/GE5/Site48/48199903.BMP","7A/1-2","","2","William L. Graf","",1999
+331,"49","49194907","July,1949","/projectResults/GE5/Site49/49194907.bmp","","","2","","contact William L. Graf about authorship",1949
+332,"49","49198101","Jan,1981","/projectResults/GE5/Site49/49198101.BMP","","","1","William L. Graf","",1981
+333,"49","49199903","March,1999","/projectResults/GE5/Site49/49199903.BMP","7/6-7","","2","William L. Graf","",1999
+334,"50","50194907","July,1949","","","","1","","contact William L. Graf about authorship",1949
+335,"50","","Jan,1981","","41/3A","","0","William L. Graf","",1981
+336,"50","50199903","March,1999","","7A/12","","1","William L. Graf","",1999
+337,"50","5019993a","March,1999","","7A/13-14","","2","William L. Graf","",1999
+338,"51","51194908","Aug,1949","/projectResults/GE5/Site51/51194908.BMP","34/19","","2","","contact William L. Graf about authorship",1949
+339,"51","51198101","Jan,1981","/projectResults/GE5/Site51/51198101.BMP","41/6","","1","William L. Graf","",1981
+340,"52","","Octo,1980","","39/1+","","0","William L. Graf","",1980
+341,"52","52000000","","","","","1","","",
+342,"52","","May,1999","","","","1","William L. Graf","",1999
+343,"52","","May,1999","","","","1","William L. Graf","",1999
+344,"52","","May,1999","","","","1","William L. Graf","",1999
+345,"53","53191803","March,1918","/projectResults/GE5/Site53/53191803.BMP","43/23","","1","","contact William L. Graf about authorship",1918
+346,"53","53198104","April,1981","/projectResults/GE5/Site53/53198104.bmp","41/18","","1","William L. Graf","",1981
+347,"53","53198101","Jan,1981","/projectResults/GE5/Site53/53198101.bmp","","","1","William L. Graf","",1981
+348,"53","53198601","Jan,1986","/projectResults/GE5/Site53/53198601.bmp","","","1","William L. Graf","",1986
+349,"53","5319861a","Jan,1986","/projectResults/GE5/Site53/5319861a.bmp","","","1","William L. Graf","",1986
+350,"53","5319861b","Jan,1986","/projectResults/GE5/Site53/5319861b.bmp","","","1","William L. Graf","",1986
+351,"53","53199904","April,1999","/projectResults/GE5/Site53/53199904.BMP","12/19","","1","William L. Graf","",1999
+352,"53","5319994a","April,1999","","12/20","","1","William L. Graf","",1999
+353,"53","5319994b","April,1999","","12/21","","1","William L. Graf","",1999
+354,"53","5319994c","April,1999","/projectResults/GE5/Site53/5319994C.BMP","12/22","","1","William L. Graf","",1999
+355,"53","5319994d","April,1999","/projectResults/GE5/Site53/5319994D.BMP","12/23","","1","William L. Graf","",1999
+356,"53","5319994e","April,1999","/projectResults/GE5/Site53/5319994E.BMP","12/24","","1","William L. Graf","",1999
+357,"54","54190503","March,1905","","43/21","","2","","contact William L. Graf about authorship",1905
+358,"54","54198101","Jan,1981","/projectResults/GE5/Site54/54198101.bmp","41/20","","1","William L. Graf","",1981
+359,"54","54199903","March,1999","","11/17A","","1","William L. Graf","",1999
+360,"54","5419993a","March,1999","/projectResults/GE5/Site54/5419993A.BMP","11/16A","","1","William L. Graf","",1999
+361,"55","55194907","July,1949","","43/4-5","","","","contact William L. Graf about authorship",1949
+362,"55","5519497a","July,1949","","43/5;44","","3+","","contact William L. Graf about authorship",1949
+363,"55","5519497b","July,1949","/projectResults/GE5/Site55/5519497b.bmp","43/4;44","","4","","contact William L. Graf about authorship",1949
+364,"55","5519497c","July,1949","/projectResults/GE5/Site55/5519497c.bmp","","","1","","contact William L. Graf about authorship",1949
+365,"55","55198010","Oct,1980","","41/10","","1","William L. Graf","",1980
+366,"55","55198012","Dec,1980","/projectResults/GE5/Site55/55198012.BMP","41/11+","","1","William L. Graf","",1980
+367,"55","","Dec,1980","","42/7+","","0","William L. Graf","",1980
+368,"55","5519993a","March,1999","/projectResults/GE5/Site55/5519993A.BMP","11/7A","","1","William L. Graf","",1999
+369,"55","5519993b","March,1999","/projectResults/GE5/Site55/5519993B.BMP","11/8A","","1","William L. Graf","",1999
+370,"56","56191900","1919","/projectResults/GE5/Site56/56191900.BMP","","","1","","contact William L. Graf about authorship",1919
+371,"56","56197310","Oct, 1973","/projectResults/GE5/Site56/56197310.BMP","","","2","","contact William L. Graf about authorship",1973
+372,"56","56199903","March,1999","/projectResults/GE5/Site56/56199903.BMP","7/6","","1","William L. Graf","",1999
+373,"57","57193908","Aug,1939","","","","1","","contact William L. Graf about authorship",1939
+374,"57","57194907","July,1949","","43/30","","1","","contact William L. Graf about authorship",1949
+375,"57","57198012","Dec,1980","/projectResults/GE5/Site57/57198012.BMP","41/6","","1","William L. Graf","",1980
+376,"58","5819497a","July,1949","/projectResults/GE5/Site58/5819497a.bmp","43/24","PAN1/3","2","","contact William L. Graf about authorship",1949
+377,"58","5819497b","July,1949","/projectResults/GE5/Site58/5819497b.bmp","43/25","PAN2/3","2","","contact William L. Graf about authorship",1949
+378,"58","5819497c","July,1949","/projectResults/GE5/Site58/5819497c.bmp","43/27","PAN3/3","2","","contact William L. Graf about authorship",1949
+379,"58","58194907","July,1949","/projectResults/GE5/Site58/58194907.BMP","43/24+","","2","","contact William L. Graf about authorship",1949
+380,"58","58198012","Dec,1980","/projectResults/GE5/Site58/58198012.BMP","41/1-2","","1","William L. Graf","",1980
+381,"58","5819800a","Dec,1980","/projectResults/GE5/Site58/5819800a.bmp","41/3","","1","William L. Graf","",1980
+382,"58","58199904","April,1999","/projectResults/GE5/Site58/58199904.BMP","11B/1","","1","William L. Graf","",1999
+383,"58","5819994a","Dec,1980","/projectResults/GE5/Site58/5819994A.BMP","11B/2","","1","William L. Graf","",1980
+384,"58","5819994b","Dec,1980","/projectResults/GE5/Site58/5819994B.BMP","11B/3","","1","William L. Graf","",1980
+385,"58","5819994c","Dec,1980","","11B/4","","1","William L. Graf","",1980
+386,"58","5819994d","Dec,1980","/projectResults/GE5/Site58/5819994D.BMP","11B/5","","1","William L. Graf","",1980
+387,"58","5819994e","Dec,1980","/projectResults/GE5/Site58/5819994E.BMP","11B/6","","1","William L. Graf","",1980
+388,"59","59193803","March,1938","/projectResults/GE5/Site59/59193803.BMP","","","1","","contact William L. Graf about authorship",1938
+389,"59","59198001","Jan,1980","/projectResults/GE5/Site59/59198001.BMP","31/31","","1","William L. Graf","",1980
+390,"59","59199903","March,1999","/projectResults/GE5/Site59/59199903.bmp","8/5","","1","William L. Graf","",1999
+391,"59","5919993a","March,1999","/projectResults/GE5/Site59/5919993a.bmp","8/6","","1","William L. Graf","",1999
+392,"60","60190500","1905","","","","","","contact William L. Graf about authorship",1905
+393,"60","6019497a","July,1949","","32/14+","PAN1/2","2","","contact William L. Graf about authorship",1949
+394,"60","6019497b","July,1949","","32/15","PAN2/2","2","","contact William L. Graf about authorship",1949
+395,"60","6019801a","Jan,1980","/projectResults/GE5/Site60/6019801A.BMP","31/5+","PAN1/2","1","William L. Graf","",1980
+396,"60","6019801b","Jan,1980","/projectResults/GE5/Site60/6019801B.BMP","31/4","PAN2/2","1","William L. Graf","",1980
+397,"60","6019802a","Feb,1980","","35/33+","PAN1/2","1","William L. Graf","",1980
+398,"60","6019802b","Feb,1980","/projectResults/GE5/Site60/6019802B.BMP","35/32","PAN2/2","1","William L. Graf","",1980
+399,"60","60199903","March,1999","/projectResults/GE5/Site60/60199903.bmp","8/7","","1","William L. Graf","",1999
+400,"60","6019993a","March,1999","/projectResults/GE5/Site60/6019993a.bmp","8/8","","1","William L. Graf","",1999
+401,"60","6019993b","March,1999","/projectResults/GE5/Site60/6019993b.bmp","8/9","","1","William L. Graf","",1999
+402,"60","6019993c","March,1999","/projectResults/GE5/Site60/6019993c.bmp","8/10","","1","William L. Graf","",1999
+403,"60","6019993d","March,1999","/projectResults/GE5/Site60/6019993d.bmp","8/11","","1","William L. Graf","",1999
+404,"60","6019993e","March,1999","/projectResults/GE5/Site60/6019993e.bmp","8/12","","1","William L. Graf","",1999
+405,"61","61194108","Aug,1941","","","","1","","contact William L. Graf about authorship",1941
+406,"63","63194908","Aug,1949","/projectResults/GE5/Site63/63194908.BMP","34/9+","","2","","contact William L. Graf about authorship",1949
+407,"63","63198012","Dec,1980","/projectResults/GE5/Site63/63198012.BMP","40/35+","","1","William L. Graf","",1980
+408,"64","64194907","July,1949","/projectResults/GE5/Site64/64194907.BMP","","","1","","contact William L. Graf about authorship",1949
+409,"64","64199903","March,1999","/projectResults/GE5/Site64/64199903.BMP","7A/3","","1","William L. Graf","",1999
+410,"64","6419993a","March,1999","/projectResults/GE5/Site64/6419993A.BMP","7A/4","","1","William L. Graf","",1999
+411,"64","6419993b","March,1999","/projectResults/GE5/Site64/6419993B.BMP","7A/5","","1","William L. Graf","",1999
+412,"65","65194907","July,1949","/projectResults/GE5/Site65/65194907.BMP","","","1","","contact William L. Graf about authorship",1949
+413,"65","65199903","March,1999","/projectResults/GE5/Site65/65199903.BMP","7A/8","","1","William L. Graf","",1999
+414,"65","6519993a","March,1999","","7A/9","","1","William L. Graf","",1999
+415,"66","66194912","Dec,1949","/projectResults/GE5/Site66/66194912.BMP","","","1","","contact William L. Graf about authorship",1949
+416,"66","66199903","March,1999","/projectResults/GE5/Site66/66199903.BMP","7/11","","1","William L. Graf","",1999
+417,"66","6619993a","March,1999","/projectResults/GE5/Site66/6619993A.BMP","7/12","","1","William L. Graf","",1999
+418,"67","67190500","1905","/projectResults/GE5/Site67/67190500.BMP","35/23","","1","","contact William L. Graf about authorship",1905
+419,"67","67198000","1980","/projectResults/GE5/Site67/67198000.bmp","35/22","","1","William L. Graf","",1980
+420,"67","67199903","March,1999","/projectResults/GE5/Site67/67199903.BMP","7A/16","","1","William L. Graf","",1999
+421,"67","6719993a","March,1999","/projectResults/GE5/Site67/6719993A.BMP","7A/17","","1","William L. Graf","",1999
+422,"68","68189600","1896","/projectResults/GE5/Site68/68189600.BMP","","","1","","contact William L. Graf about authorship",1896
+423,"69","69190500","1905","/projectResults/GE5/Site69/69190500.bmp","","","2","","contact William L. Graf about authorship",1905
+424,"69","69199902","Feb,1999","/projectResults/GE5/Site69/69199902.bmp","4/23","","1","William L. Graf","",1999
+425,"70","70000000","","/projectResults/GE5/Site70/70000000.BMP","","","1","","",
+426,"70","70199903","March,1999","","12/5","","1","William L. Graf","",1999
+427,"70","7019993a","March,1999","/projectResults/GE5/Site70/7019993A.BMP","12/6","","1","William L. Graf","",1999
+428,"71","71189500","1895","/projectResults/GE5/Site71/71189500.BMP","","","1","","contact William L. Graf about authorship",1895
+429,"71","71199902","Feb,1999","","","","1","William L. Graf","",1999
+430,"72","72191600","1916","/projectResults/GE5/Site72/72191600.BMP","","","1","","contact William L. Graf about authorship",1916
+431,"73","73191100","1911","/projectResults/GE5/Site73/73191100.BMP","","","1","","contact William L. Graf about authorship",1911
+432,"74","74198002","Feb,1980","/projectResults/GE5/Site74/74198002.BMP","35/19","","1","William L. Graf","",1980
+433,"74","7418902a","Feb,1980","/projectResults/GE5/Site74/7419802A.BMP","35/20","","1","William L. Graf","",1980
+434,"74","7418902b","Feb, 1890","/projectResults/GE5/Site74/7419802B.BMP","35/21","","1","","contact William L. Graf about authorship",1890
+435,"74","74199902","Feb,1999","/projectResults/GE5/Site74/74199902.bmp","4/21","","1","William L. Graf","",1999
+436,"75","75190200","1902","/projectResults/GE5/Site75/75190200.BMP","","","1","","contact William L. Graf about authorship",1902
+437,"75","75199902","Feb,1999","/projectResults/GE5/Site75/75199902.bmp","4/15","","1","William L. Graf","",1999
+438,"76","76189500","1892","","","","1","","contact William L. Graf about authorship",1892
+439,"76","76198009","Sep,1890","/projectResults/GE5/Site76/76198009.BMP","39/1-2","","1","William L. Graf","",1890
+440,"76","76199903","March,1999","/projectResults/GE5/Site76/76199903.BMP","9/16-17","","2","William L. Graf","",1999
+441,"76","76199904","April,1999","/projectResults/GE5/Site76/76199904.BMP","13/8","PAN1/3","1","William L. Graf","",1999
+442,"76","7619994a","April,1999","/projectResults/GE5/Site76/7619994A.BMP","13/9","PAN2/3","1","William L. Graf","",1999
+443,"76","7619994b","April,1999","/projectResults/GE5/Site76/7619994B.BMP","13/10","PAN3/3","1","William L. Graf","",1999
+444,"76","","March,1999","","11/10A","","1","William L. Graf","",1999
+445,"76","","March,1999","","11/9A","","1","William L. Graf","",1999
+446,"77","77191200","1912","/projectResults/GE5/Site77/77191200.BMP","","","1","","contact William L. Graf about authorship",1912
+447,"77","77198611","Nov,1986","/projectResults/GE5/Site77/77198611.BMP","","","2","William L. Graf","",1986
