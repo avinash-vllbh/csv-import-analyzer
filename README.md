@@ -124,10 +124,9 @@ puts metadata
 
 ## TODO:
   <ul>
-    <li> Handle control of processed input file to user </li>
-    <li> Return the analysis as Json object.</li>
     <li> Better - Structuring the analysis outputted to csv</li>
     <li> Add support to convert and import xlsx files to csv </li>
+    <li> Handle control of processed input file to user </li>
   </ul>
 
 ## Additional Information
