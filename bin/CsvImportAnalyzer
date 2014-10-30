@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'csv-import-analyzer'
+puts CsvImportAnalyzer.process(ARGV[0])
