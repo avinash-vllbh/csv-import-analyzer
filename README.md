@@ -50,7 +50,7 @@ metadata = CsvImportAnalyzer.process("test.csv", {:distinct => 2})
 ```
 ### Result
 
-```javascript
+```json
 {
   "csv_file": {
     "filename": "sampleTab.csv",
