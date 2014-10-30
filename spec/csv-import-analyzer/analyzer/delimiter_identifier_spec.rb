@@ -42,6 +42,7 @@ describe "#identify_delimiter" do
   end
 end
 
+# Testing private method, although we don't really have to
 describe "#return_plausible_delimiter" do
   before(:each) do
     @dummy_class = DummyClass.new
@@ -50,12 +51,12 @@ describe "#return_plausible_delimiter" do
 
   context "identifies delimiter" do
     it "returns comma as the delimiter by default" do
-      expect(@dummy_class.return_plausible_delimiter).to eq(",")
+      expect(@dummy_class.send(:return_plausible_delimiter)).to eq(",")
     end
 
     it "returns semicolon as the delimiter for sample delimiter_count" do
       @dummy_class.stub(:delimiter_count).and_return(Hash[","=>15, ";"=>16, "\t"=>0, "|"=>0])
-      expect(@dummy_class.return_plausible_delimiter).to eq(";")
+      expect(@dummy_class.send(:return_plausible_delimiter)).to eq(";")
     end
   end  
 end

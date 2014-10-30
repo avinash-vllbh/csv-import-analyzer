@@ -2,7 +2,7 @@ require 'simplecov'
 # Must be ahead of requiring core library to start the code coverage.
 SimpleCov.start
 require 'csv-import-analyzer'
-
+# $:<< File.join(File.dirname(__FILE__), '..')
 # Path to sample files in the fixtures folder that are made available to all specs for testing
 $sample_csv_path = "/home/avinash/Desktop/csv-import-analyzer/spec/fixtures/sample.csv"
 $sample_ssv_path = "/home/avinash/Desktop/csv-import-analyzer/spec/fixtures/semicolon-sample.csv"
