@@ -1,19 +1,15 @@
 # Csv::Import::Analyzer
 
-Perform datatype analysis on desired chunk
-Calculate min-max bounds for each column
-Determine which coulmns are nullable in the csv file
+CsvImportAnalyzer is intended to help perform data analysis on csv (comma seperated), tsv (tab seperated) or ssv (semi-colon seperated) files. It can be used to process large datasets in desired chunk sizes (defaults to 200 rows), gives you a comprehensive analysis on each column with possible datatype, minimum and manimum bounds, if the column can be set to nullable for each column. 
 
-Note: This gem expects the first line to be definitve header, as in like column names if the csv file has to be imported to database.
+<b>Note</b>: This gem expects the first line to be definitve header, as in like column names if the csv file has to be imported to database.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-
 gem 'csv-import-analyzer'
-
 ```
 
 And then execute:
@@ -27,11 +23,12 @@ Or install it yourself as:
 ## Usage
 
 Calling process on a filename would generate metadata for the sample file and return it as a json object. This metadata would have the following
-High level stats for the given file (E.g. filename, file size, number of rows, number of columns).
-Data manipulation done for pre-processing the file.
-Data analysis on each column as key value pairs. 
-By default you would also have MySQL queries that you need to import the file to database.
-
+<ul>
+    <li> High level stats for the given file (E.g. filename, file size, number of rows, number of columns).</li>
+    <li> Data manipulation done for pre-processing the file.</li>
+    <li> Data analysis on each column as key value pairs.</li>
+    <li> By default you would also have MySQL queries that you need to import the file to database.</li>
+</ul>
 ```ruby
   CsvImportAnalyzer.process(filename)
 ```
