@@ -26,7 +26,11 @@ Or install it yourself as:
 
 ## Usage
 
-Calling process on a filename would generate a metadata_output.json which has the Delimiter, Datatype Analysis and SQL (create and import) statements for both PostgreSQL and MySQL
+Calling process on a filename would generate metadata for the sample file and return it as a json object. This metadata would have the following
+High level stats for the given file (E.g. filename, file size, number of rows, number of columns).
+Data manipulation done for pre-processing the file.
+Data analysis on each column as key value pairs. 
+By default you would also have MySQL queries that you need to import the file to database.
 
 ```ruby
   CsvImportAnalyzer.process(filename)
@@ -49,7 +53,10 @@ To get the data analysis of above file, you can use CsvImportAnalyzer to process
 metadata = CsvImportAnalyzer.process("test.csv", {:distinct => 2})
 ```
 ### Result
-
+Now the metadata would hold the json object of the comprehensive analysis. Below is what the metadata would be for the sample csv file
+```ruby
+puts metadata
+```
 ```json
 {
   "csv_file": {
@@ -73,29 +80,21 @@ metadata = CsvImportAnalyzer.process("test.csv", {:distinct => 2})
       "datatype_analysis": {
         "int": 4
       },
-      "distinct_values": [
-        1997,
-        1999,
-        1996
-      ]
+      "distinct_values": "2+"
     },
     "make_id": {
       "datatype": "string",
       "datatype_analysis": {
         "string": 4
       },
-      "distinct_values": [
-        "Ford",
-        "Chevy",
-        "Jeep"
-      ]
+      "distinct_values": "2+"
     },
     "model_id": {
       "datatype": "string",
       "datatype_analysis": {
         "string": 4
       },
-      "distinct_values": "3+"
+      "distinct_values": "2+"
     },
     "description_id": {
       "datatype": "string",
@@ -113,14 +112,10 @@ metadata = CsvImportAnalyzer.process("test.csv", {:distinct => 2})
       "datatype_analysis": {
         "float": 4
       },
-      "distinct_values": "3+"
+      "distinct_values": "2+"
     }
   },
   "sql": {
-    "pg": {
-      "create_query": "create table processed_sampletab.csv ( year_id int not null, make_id varchar(255) not null, model_id varchar(255) not null, description_id varchar(255), price_id float not null);",
-      "import_query": "COPY processed_sampletab.csv FROM '/tmp/processed_sampleTab.csv' HEADER DELIMITER ',' CSV NULL AS 'NULL';"
-    },
     "mysql": {
       "create_query": "create table processed_sampletab.csv ( year_id int not null, make_id varchar(255) not null, model_id varchar(255) not null, description_id varchar(255), price_id float not null);",
       "import_query": "COPY processed_sampletab.csv FROM '/tmp/processed_sampleTab.csv' HEADER DELIMITER ',' CSV NULL AS 'NULL';"
