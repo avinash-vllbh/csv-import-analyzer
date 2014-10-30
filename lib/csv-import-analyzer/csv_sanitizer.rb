@@ -69,12 +69,12 @@ module CsvImportAnalyzer
       {
         :metadata_output => nil,      # To be set if metadata needs to be printed to a file
         :processed_input => nil,      # To be set if processed input is needed
-        :unique => 10,                # Threshold for number of defaults values that needs to identified
+        :unique => 2,                 # Threshold for number of defaults values that needs to identified
         :check_bounds => true,        # Option to check for min - max bounds for each column [true => find the bounds]
         :datatype_analysis => 200,    # Number of rows to be sampled for datatype analysis
         :chunk => 200,                # Chunk size (no of rows) that needs to processed in-memory [Important not to load entire file into memory]
-        :database => [:pg, :mysql],   # Databases for which schema needs to be generated
-        :quote_convert => true,       # Convert any single quotes to double quotes
+        :database => [:mysql],        # Databases for which schema needs to be generated
+        :quote_convert => true,       # Convert single quotes to double quotes
         :replace_nulls => true,       # Replace nulls, empty's, nils, Null's with NULL
         :out_format => :json          # Set what type of output do you need as analysis
       }

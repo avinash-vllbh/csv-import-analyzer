@@ -178,8 +178,8 @@ module CsvImportAnalyzer
           columns[column_name] = {}
           columns[column_name][:datatype] = header_datatypes[column_name]
           columns[column_name][:datatype_analysis] = header_datatype_analysis[column_name]
-          if unique_values[column_name].size > max_distinct_values
-            columns[column_name][:distinct_values] = "#{max_distinct_values}+"
+          if unique_values[column_name].size > max_distinct_values - 1
+            columns[column_name][:distinct_values] = "#{max_distinct_values - 1}+"
           else
             columns[column_name][:distinct_values] = unique_values[column_name]
           end
