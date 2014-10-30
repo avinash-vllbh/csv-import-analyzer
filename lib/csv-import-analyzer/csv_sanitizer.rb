@@ -1,6 +1,5 @@
 require "smarter_csv"
 require "tempfile"
-require "pry"
 require_relative "analyzer/delimiter_identifier"
 require_relative "helpers/string_class_extensions"
 require_relative "helpers/common_functions"
@@ -50,6 +49,7 @@ module CsvImportAnalyzer
           end
           line_count += 1
         end
+        options[:rows] = line_count
         temp_file.close
         processed_file.close
         # Cleaned the file - Now analyze for datatypes

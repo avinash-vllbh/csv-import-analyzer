@@ -1,5 +1,4 @@
 # file_type_assertion.rb
-require 'pry'
 module CsvImportAnalyzer
   module Analyzer
     class FileTypeAssertion

@@ -132,13 +132,12 @@ module CsvImportAnalyzer
       file_data[:filename] = File.basename(options[:original_filename])
       file_data[:file_size] = File.size(options[:original_filename])
       file_data[:record_delimiter] = options[:delimiter]
-
+      file_data[:rows] = options[:rows]
+      file_data[:columns] = options[:csv_column_datatypes].keys.size
       file_data[:processed_filename] = File.basename(options[:filename])
       file_data[:processed_file_path] = options[:filename]
       file_data[:processed_file_size] = File.size(options[:filename])
       file_data[:error_report] = options[:temp_file]
-      # file_data[:rows] = options[:rows]
-      # file_data[:columns] = options[:columns]
       return file_data
     end
 
