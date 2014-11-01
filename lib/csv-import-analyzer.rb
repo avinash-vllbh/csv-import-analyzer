@@ -11,7 +11,7 @@ module CsvImportAnalyzer
   # returns FileNotFound if given file is invalid
   ###
   def process(filename, options = {})
-    return InvalidArgumentError.new if filename.nil?
+    return ArgumentError.new("A valid file needed to process") if filename.nil?
     if File::exist?(filename)
       CsvImportAnalyzer::CsvSanitizer.new().process(File.absolute_path(filename), options)
     else
