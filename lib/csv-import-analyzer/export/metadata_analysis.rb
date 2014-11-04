@@ -119,7 +119,10 @@ module CsvImportAnalyzer
       metadata[:csv_file] = add_file_metadata
       metadata[:data_manipulations] = add_data_manipulations
       metadata[:csv_headers] = add_header_metadata
-      metadata[:sql] = add_sql_data
+      # Add SQL data to metadata only if databases option is set.
+      unless databases.nil?
+        metadata[:sql] = add_sql_data
+      end
     end
 
     ###

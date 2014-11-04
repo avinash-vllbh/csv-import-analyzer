@@ -36,7 +36,7 @@ module CsvImportAnalyzer
     def tablename
       # May be optimize this, not run all three operations everytime filename method is called ??
       # May be creating filename as instance variable and using a double pipe will relive it from running everytime doesn't it??
-      tablename = File.basename(options[:filename])
+      tablename = File.basename(options[:original_filename])
       tablename.gsub!(" ", "_")
       tablename.downcase!
       return tablename
@@ -61,17 +61,23 @@ module CsvImportAnalyzer
     # Makes a function call to return the metadata analysis of the file
     ###
     def generate_query
-      databases.each do |db|
-        create_query[db] = ["create table #{tablename} ("]
-      end
-      csv_column_datatypes.each do |header, datatype|
-        append_to_query = build_query_for_datatype(header, datatype)
-        append_to_query.each do |key, value|
-          create_query[key].push(value)
+      unless databases.nil?
+        databases.each do |db|
+          create_query[db] = ["create table #{tablename} ("]
         end
+        csv_column_datatypes.each do |header, datatype|
+          append_to_query = build_query_for_datatype(header, datatype)
+          append_to_query.each do |key, value|
+            create_query[key].push(value)
+          end
+        end
+        prepare_sql_statements
+        prepare_import_csv
+        # Pass the prepared statements to options varaible.
+        # Which gets passed on to print_metadata_analysis
+        options[:create_query] = create_query
+        options[:import_query] = import_query
       end
-      prepare_sql_statements
-      prepare_import_csv
       print_metadata_analysis
     end
 
@@ -116,11 +122,14 @@ module CsvImportAnalyzer
     # prepares sql statements based on the query for each header formed earlier
     ###
     def prepare_sql_statements
-      databases.each do |db|
-        create_query[db][0] = create_query[db].first + " " + create_query[db][1]
-        create_query[db].delete_at(1)
-        create_query[db] = create_query[db].join(", ")
-        create_query[db] << ");"
+      begin
+        databases.each do |db|
+          create_query[db][0] = create_query[db].first + " " + create_query[db][1]
+          create_query[db].delete_at(1)
+          create_query[db] = create_query[db].join(", ")
+          create_query[db] << ");"
+        end
+      rescue TypeError => e
       end
     end
 
@@ -130,8 +139,8 @@ module CsvImportAnalyzer
     # instantiates MetadataAnalysis and passes options hash
     ###
     def print_metadata_analysis
-      options[:create_query] = create_query
-      options[:import_query] = import_query
+      # options[:create_query] = create_query
+      # options[:import_query] = import_query
       export = CsvImportAnalyzer::MetadataAnalysis.new(options)
       export.metadata_print
     end
