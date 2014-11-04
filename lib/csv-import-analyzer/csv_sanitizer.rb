@@ -69,7 +69,7 @@ module CsvImportAnalyzer
       {
         :metadata_output => nil,      # To be set if metadata needs to be printed to a file
         :processed_input => nil,      # To be set if processed input is needed
-        :unique => 2,                 # Threshold for number of defaults values that needs to identified
+        :unique => 5,                 # Threshold for number of defaults values that needs to identified
         :check_bounds => true,        # Option to check for min - max bounds for each column [true => find the bounds]
         :datatype_analysis => 200,    # Number of rows to be sampled for datatype analysis
         :chunk => 200,                # Chunk size (no of rows) that needs to processed in-memory [Important not to load entire file into memory]

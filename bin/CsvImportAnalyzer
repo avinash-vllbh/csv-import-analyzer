@@ -1,4 +1,59 @@
 #!/usr/bin/env ruby
-
+require 'optparse'
 require 'csv-import-analyzer'
-puts CsvImportAnalyzer.process(ARGV[0])
+
+# Default options for the executable
+options = {:input => nil, :metadata_output => nil, :processed_input => nil, :unique => 5, 
+  :chunk => 200, :database => [:mysql], :quote_convert => true, :replace_nulls => true, :check_bounds => true}
+
+# Parse the options using optparse
+# prases the input given through command line and set to the respective option
+# E.g. CsvImportAnalyzer -i "test.csv"
+#      ==> options[:input] = "test.csv"
+parser = OptionParser.new do |opts|
+      opts.banner = "Usage: CsvImportAnalyzer [options]"
+
+      opts.on('-i', '--input filename', 'Input file name') do |input|
+        options[:input] = input  # todo: be able to handle files not in the current directory
+      end
+      opts.on('-m', '--output-structure filename', 'Output the metadata of file') do |metadata_output|
+        options[:metadata_output] = metadata_output
+      end
+      opts.on('-o', '--output-cleaned filename', 'Output the cleaned csv file name, defaults to current driectory proccessed_(filename).csv ') do |processed_input|
+        options[:processed_input] = processed_input
+      end
+      opts.on('-u', '--unique unique', 'No of Unique values you need, default: 10') do |unique|
+        options[:unique] = unique
+      end
+      opts.on('-c', '--chunk size', 'Chunk size for predecting datatypes, default: 200') do |chunk|
+        options[:chunk] = chunk
+      end
+      # opts.on('-s', '--skip lines', 'skip the number of lines at the top, default: 0') do |skip|
+      #   options[:skip] = skip
+      # end
+      opts.on('-d', '--database type', 'MySQL or Postgres, Options: M or P, default: nil(print nothing)') do |database_type|
+        options[:database] = [database_type.upcase]
+      end
+      opts.on('-q', '--quotes conversion', 'Convert single quotes to double quotes, options: true or false, default: true') do |quote_convert|
+        options[:quote_convert] = quote_convert.upcase
+      end
+      opts.on('-r', '--replace nulls', 'replace empty, Null\'s, \N, NAN with NULL, options: true or false, default: true') do |replace_nulls|
+        options[:replace_nulls] = replace_nulls.upcase
+      end
+      opts.on('-h', '--help', 'Displays Help') do
+        puts opts
+        exit
+      end
+    end
+parser.parse!
+
+# Input validations
+# Make sure a filename is given to the executable
+filename = nil
+if options[:input] == nil
+  print " Requires a valid input file name! \n"
+  puts parser
+  exit
+end 
+
+puts CsvImportAnalyzer.process(options[:input], options)
