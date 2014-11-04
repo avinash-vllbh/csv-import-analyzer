@@ -124,7 +124,7 @@ module CsvImportAnalyzer
     def prepare_sql_statements
       begin
         databases.each do |db|
-          create_query[db][0] = create_query[db].first + " " + create_query[db][1]
+          create_query[db][0] = create_query[db][0] + " " + create_query[db][1]
           create_query[db].delete_at(1)
           create_query[db] = create_query[db].join(", ")
           create_query[db] << ");"
