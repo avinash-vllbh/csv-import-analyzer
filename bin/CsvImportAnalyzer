@@ -32,13 +32,15 @@ parser = OptionParser.new do |opts|
       #   options[:skip] = skip
       # end
       opts.on('-d', '--database type', 'MySQL or Postgres, Options: M or P, default: nil(print nothing)') do |database_type|
-        options[:database] = [database_type.upcase]
+        if database_type.nil?
+          options[:database] = nil
+        end
       end
       opts.on('-q', '--quotes conversion', 'Convert single quotes to double quotes, options: true or false, default: true') do |quote_convert|
-        options[:quote_convert] = quote_convert.upcase
+        options[:quote_convert] = quote_convert
       end
       opts.on('-r', '--replace nulls', 'replace empty, Null\'s, \N, NAN with NULL, options: true or false, default: true') do |replace_nulls|
-        options[:replace_nulls] = replace_nulls.upcase
+        options[:replace_nulls] = replace_nulls
       end
       opts.on('-h', '--help', 'Displays Help') do
         puts opts
